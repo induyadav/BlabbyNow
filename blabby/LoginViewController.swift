@@ -9,7 +9,7 @@ import  UIKit
 import FirebaseAuth
 import Firebase
 
-//test commit ashutosh//
+//test commit ashutosh mane//
 
 class LoginViewController: UIViewController{
    //object of data model cladd my info
