@@ -1,0 +1,843 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04AC01BB1EED7AE10019CE1B /* RecordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC01BA1EED7AE10019CE1B /* RecordCollectionViewCell.swift */; };
+		6E1AB111C5648C55A8636E63 /* Pods_blabbyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A099D1D361F49A7D77C6578F /* Pods_blabbyUITests.framework */; };
+		8FE85E1CD667E8CD5D7E46BC /* Pods_blabby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A5B246E630B4668F50F952 /* Pods_blabby.framework */; };
+		9F5E7E66858F0BA4CA7ADA17 /* Pods_blabbyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F102E983E33D1FAA72F2E52 /* Pods_blabbyTests.framework */; };
+		FB0F984F1F9A13BB0097A7CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F984E1F9A13BB0097A7CB /* LoginViewController.swift */; };
+		FB56B2C71F7A494C0065739C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB56B2C51F7A487E0065739C /* CoreData.framework */; };
+		FB6372C01F1E9E030069F3A1 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6372BF1F1E9E030069F3A1 /* Record.swift */; };
+		FB73B1501F9DB11600C1B8EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB73B14F1F9DB11600C1B8EA /* GoogleService-Info.plist */; };
+		FB73B1531F9DF97500C1B8EA /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB73B1511F9DF97500C1B8EA /* LaunchScreenViewController.swift */; };
+		FB73B1541F9DF97500C1B8EA /* LaunchScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB73B1521F9DF97500C1B8EA /* LaunchScreenViewController.xib */; };
+		FBFFF93C1F790D6B0074AA06 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFCAE3071F037E13001B7F25 /* CFNetwork.framework */; };
+		FBFFF93D1F790D710074AA06 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFCAE3051F037E01001B7F25 /* SystemConfiguration.framework */; };
+		FFAF1A501EE9BC8E00AB1512 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF1A4F1EE9BC8E00AB1512 /* AppDelegate.swift */; };
+		FFAF1A521EE9BC8E00AB1512 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF1A511EE9BC8E00AB1512 /* ViewController.swift */; };
+		FFAF1A551EE9BC8E00AB1512 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFAF1A531EE9BC8E00AB1512 /* Main.storyboard */; };
+		FFAF1A581EE9BC8E00AB1512 /* blabby.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FFAF1A561EE9BC8E00AB1512 /* blabby.xcdatamodeld */; };
+		FFAF1A5A1EE9BC8E00AB1512 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFAF1A591EE9BC8E00AB1512 /* Assets.xcassets */; };
+		FFAF1A5D1EE9BC8E00AB1512 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFAF1A5B1EE9BC8E00AB1512 /* LaunchScreen.storyboard */; };
+		FFAF1A681EE9BC8E00AB1512 /* blabbyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF1A671EE9BC8E00AB1512 /* blabbyTests.swift */; };
+		FFAF1A731EE9BC8E00AB1512 /* blabbyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF1A721EE9BC8E00AB1512 /* blabbyUITests.swift */; };
+		FFCAE3041F02A185001B7F25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFCAE3031F02A185001B7F25 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FFAF1A641EE9BC8E00AB1512 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFAF1A441EE9BC8E00AB1512 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFAF1A4B1EE9BC8E00AB1512;
+			remoteInfo = blabby;
+		};
+		FFAF1A6F1EE9BC8E00AB1512 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFAF1A441EE9BC8E00AB1512 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFAF1A4B1EE9BC8E00AB1512;
+			remoteInfo = blabby;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04AC01BA1EED7AE10019CE1B /* RecordCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCollectionViewCell.swift; sourceTree = "<group>"; };
+		04AC4A871EF6C6160055168C /* blabby.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = blabby.entitlements; sourceTree = "<group>"; };
+		0EBA7D9B25903BF880F413D8 /* Pods-blabbyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blabbyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-blabbyTests/Pods-blabbyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		18A0CF44728AA5C82AEDCFAF /* Pods-blabby.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blabby.debug.xcconfig"; path = "Pods/Target Support Files/Pods-blabby/Pods-blabby.debug.xcconfig"; sourceTree = "<group>"; };
+		1B992899BFC974174064A2AC /* Pods-blabbyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blabbyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-blabbyUITests/Pods-blabbyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2894A995D41E14FC322430F7 /* Pods-blabby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blabby.release.xcconfig"; path = "Pods/Target Support Files/Pods-blabby/Pods-blabby.release.xcconfig"; sourceTree = "<group>"; };
+		3F102E983E33D1FAA72F2E52 /* Pods_blabbyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_blabbyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A5EB0C62BC624B3635BD13F /* Pods-blabbyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blabbyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-blabbyUITests/Pods-blabbyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7DFEE0A0B9F6EF87E1D6C1DC /* Pods-blabbyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blabbyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-blabbyTests/Pods-blabbyTests.release.xcconfig"; sourceTree = "<group>"; };
+		A099D1D361F49A7D77C6578F /* Pods_blabbyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_blabbyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7A5B246E630B4668F50F952 /* Pods_blabby.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_blabby.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB0F984E1F9A13BB0097A7CB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FB56B2C51F7A487E0065739C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FB6372BF1F1E9E030069F3A1 /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		FB73B14F1F9DB11600C1B8EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FB73B1511F9DF97500C1B8EA /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		FB73B1521F9DF97500C1B8EA /* LaunchScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreenViewController.xib; sourceTree = "<group>"; };
+		FFAF1A4C1EE9BC8E00AB1512 /* blabby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blabby.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFAF1A4F1EE9BC8E00AB1512 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FFAF1A511EE9BC8E00AB1512 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FFAF1A541EE9BC8E00AB1512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FFAF1A571EE9BC8E00AB1512 /* blabby.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = blabby.xcdatamodel; sourceTree = "<group>"; };
+		FFAF1A591EE9BC8E00AB1512 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFAF1A5C1EE9BC8E00AB1512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FFAF1A5E1EE9BC8E00AB1512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFAF1A631EE9BC8E00AB1512 /* blabbyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blabbyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFAF1A671EE9BC8E00AB1512 /* blabbyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blabbyTests.swift; sourceTree = "<group>"; };
+		FFAF1A691EE9BC8E00AB1512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFAF1A6E1EE9BC8E00AB1512 /* blabbyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blabbyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFAF1A721EE9BC8E00AB1512 /* blabbyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blabbyUITests.swift; sourceTree = "<group>"; };
+		FFAF1A741EE9BC8E00AB1512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFCAE3031F02A185001B7F25 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FFCAE3051F037E01001B7F25 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FFCAE3071F037E13001B7F25 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FFAF1A491EE9BC8E00AB1512 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB56B2C71F7A494C0065739C /* CoreData.framework in Frameworks */,
+				FBFFF93D1F790D710074AA06 /* SystemConfiguration.framework in Frameworks */,
+				FBFFF93C1F790D6B0074AA06 /* CFNetwork.framework in Frameworks */,
+				8FE85E1CD667E8CD5D7E46BC /* Pods_blabby.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFAF1A601EE9BC8E00AB1512 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F5E7E66858F0BA4CA7ADA17 /* Pods_blabbyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFAF1A6B1EE9BC8E00AB1512 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E1AB111C5648C55A8636E63 /* Pods_blabbyUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04AC01B71EEC16860019CE1B /* supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				FB73B1521F9DF97500C1B8EA /* LaunchScreenViewController.xib */,
+				04AC4A871EF6C6160055168C /* blabby.entitlements */,
+				FFCAE3031F02A185001B7F25 /* GoogleService-Info.plist */,
+				FFAF1A591EE9BC8E00AB1512 /* Assets.xcassets */,
+				FFAF1A5B1EE9BC8E00AB1512 /* LaunchScreen.storyboard */,
+				FB73B14F1F9DB11600C1B8EA /* GoogleService-Info.plist */,
+				FFAF1A5E1EE9BC8E00AB1512 /* Info.plist */,
+				FFAF1A561EE9BC8E00AB1512 /* blabby.xcdatamodeld */,
+			);
+			name = "supporting files";
+			sourceTree = "<group>";
+		};
+		04AC4A881EF6C6160055168C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB56B2C51F7A487E0065739C /* CoreData.framework */,
+				FFCAE3071F037E13001B7F25 /* CFNetwork.framework */,
+				FFCAE3051F037E01001B7F25 /* SystemConfiguration.framework */,
+				C7A5B246E630B4668F50F952 /* Pods_blabby.framework */,
+				3F102E983E33D1FAA72F2E52 /* Pods_blabbyTests.framework */,
+				A099D1D361F49A7D77C6578F /* Pods_blabbyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F75FC1879C398BE23A145726 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18A0CF44728AA5C82AEDCFAF /* Pods-blabby.debug.xcconfig */,
+				2894A995D41E14FC322430F7 /* Pods-blabby.release.xcconfig */,
+				0EBA7D9B25903BF880F413D8 /* Pods-blabbyTests.debug.xcconfig */,
+				7DFEE0A0B9F6EF87E1D6C1DC /* Pods-blabbyTests.release.xcconfig */,
+				7A5EB0C62BC624B3635BD13F /* Pods-blabbyUITests.debug.xcconfig */,
+				1B992899BFC974174064A2AC /* Pods-blabbyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FFAF1A431EE9BC8E00AB1512 = {
+			isa = PBXGroup;
+			children = (
+				FFAF1A4E1EE9BC8E00AB1512 /* blabby */,
+				FFAF1A661EE9BC8E00AB1512 /* blabbyTests */,
+				FFAF1A711EE9BC8E00AB1512 /* blabbyUITests */,
+				FFAF1A4D1EE9BC8E00AB1512 /* Products */,
+				04AC4A881EF6C6160055168C /* Frameworks */,
+				F75FC1879C398BE23A145726 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		FFAF1A4D1EE9BC8E00AB1512 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFAF1A4C1EE9BC8E00AB1512 /* blabby.app */,
+				FFAF1A631EE9BC8E00AB1512 /* blabbyTests.xctest */,
+				FFAF1A6E1EE9BC8E00AB1512 /* blabbyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FFAF1A4E1EE9BC8E00AB1512 /* blabby */ = {
+			isa = PBXGroup;
+			children = (
+				FB73B1511F9DF97500C1B8EA /* LaunchScreenViewController.swift */,
+				FB0F984E1F9A13BB0097A7CB /* LoginViewController.swift */,
+				FFAF1A511EE9BC8E00AB1512 /* ViewController.swift */,
+				04AC01BA1EED7AE10019CE1B /* RecordCollectionViewCell.swift */,
+				FFAF1A531EE9BC8E00AB1512 /* Main.storyboard */,
+				FFAF1A4F1EE9BC8E00AB1512 /* AppDelegate.swift */,
+				FB6372BF1F1E9E030069F3A1 /* Record.swift */,
+				04AC01B71EEC16860019CE1B /* supporting files */,
+			);
+			path = blabby;
+			sourceTree = "<group>";
+		};
+		FFAF1A661EE9BC8E00AB1512 /* blabbyTests */ = {
+			isa = PBXGroup;
+			children = (
+				FFAF1A671EE9BC8E00AB1512 /* blabbyTests.swift */,
+				FFAF1A691EE9BC8E00AB1512 /* Info.plist */,
+			);
+			path = blabbyTests;
+			sourceTree = "<group>";
+		};
+		FFAF1A711EE9BC8E00AB1512 /* blabbyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FFAF1A721EE9BC8E00AB1512 /* blabbyUITests.swift */,
+				FFAF1A741EE9BC8E00AB1512 /* Info.plist */,
+			);
+			path = blabbyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FFAF1A4B1EE9BC8E00AB1512 /* blabby */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFAF1A771EE9BC8E00AB1512 /* Build configuration list for PBXNativeTarget "blabby" */;
+			buildPhases = (
+				1D834D85B4926B03E48B173C /* [CP] Check Pods Manifest.lock */,
+				FFAF1A481EE9BC8E00AB1512 /* Sources */,
+				FFAF1A491EE9BC8E00AB1512 /* Frameworks */,
+				FFAF1A4A1EE9BC8E00AB1512 /* Resources */,
+				780EDA1E77CF8AE4E63D456B /* [CP] Embed Pods Frameworks */,
+				2CAD186E4FB56BF19B127A3F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = blabby;
+			productName = blabby;
+			productReference = FFAF1A4C1EE9BC8E00AB1512 /* blabby.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FFAF1A621EE9BC8E00AB1512 /* blabbyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFAF1A7A1EE9BC8E00AB1512 /* Build configuration list for PBXNativeTarget "blabbyTests" */;
+			buildPhases = (
+				999E7CEF2EACC1BB7CAD2B4D /* [CP] Check Pods Manifest.lock */,
+				FFAF1A5F1EE9BC8E00AB1512 /* Sources */,
+				FFAF1A601EE9BC8E00AB1512 /* Frameworks */,
+				FFAF1A611EE9BC8E00AB1512 /* Resources */,
+				3869EA51CDE658975E94F689 /* [CP] Embed Pods Frameworks */,
+				C5007715FF00A045B61BBE6A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFAF1A651EE9BC8E00AB1512 /* PBXTargetDependency */,
+			);
+			name = blabbyTests;
+			productName = blabbyTests;
+			productReference = FFAF1A631EE9BC8E00AB1512 /* blabbyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FFAF1A6D1EE9BC8E00AB1512 /* blabbyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFAF1A7D1EE9BC8E00AB1512 /* Build configuration list for PBXNativeTarget "blabbyUITests" */;
+			buildPhases = (
+				ABDB2EC726D8235D9EC8E9BF /* [CP] Check Pods Manifest.lock */,
+				FFAF1A6A1EE9BC8E00AB1512 /* Sources */,
+				FFAF1A6B1EE9BC8E00AB1512 /* Frameworks */,
+				FFAF1A6C1EE9BC8E00AB1512 /* Resources */,
+				6D01C22F475B9ACBD8DBBA95 /* [CP] Embed Pods Frameworks */,
+				D7C50EBB356B72358C30D1BA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFAF1A701EE9BC8E00AB1512 /* PBXTargetDependency */,
+			);
+			name = blabbyUITests;
+			productName = blabbyUITests;
+			productReference = FFAF1A6E1EE9BC8E00AB1512 /* blabbyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FFAF1A441EE9BC8E00AB1512 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Ashutosh Mane";
+				TargetAttributes = {
+					FFAF1A4B1EE9BC8E00AB1512 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = KDMH53532J;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					FFAF1A621EE9BC8E00AB1512 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = KDMH53532J;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FFAF1A4B1EE9BC8E00AB1512;
+					};
+					FFAF1A6D1EE9BC8E00AB1512 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = KDMH53532J;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FFAF1A4B1EE9BC8E00AB1512;
+					};
+				};
+			};
+			buildConfigurationList = FFAF1A471EE9BC8E00AB1512 /* Build configuration list for PBXProject "blabby" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FFAF1A431EE9BC8E00AB1512;
+			productRefGroup = FFAF1A4D1EE9BC8E00AB1512 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FFAF1A4B1EE9BC8E00AB1512 /* blabby */,
+				FFAF1A621EE9BC8E00AB1512 /* blabbyTests */,
+				FFAF1A6D1EE9BC8E00AB1512 /* blabbyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FFAF1A4A1EE9BC8E00AB1512 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFAF1A5D1EE9BC8E00AB1512 /* LaunchScreen.storyboard in Resources */,
+				FFCAE3041F02A185001B7F25 /* GoogleService-Info.plist in Resources */,
+				FB73B1501F9DB11600C1B8EA /* GoogleService-Info.plist in Resources */,
+				FFAF1A5A1EE9BC8E00AB1512 /* Assets.xcassets in Resources */,
+				FFAF1A551EE9BC8E00AB1512 /* Main.storyboard in Resources */,
+				FB73B1541F9DF97500C1B8EA /* LaunchScreenViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFAF1A611EE9BC8E00AB1512 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFAF1A6C1EE9BC8E00AB1512 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D834D85B4926B03E48B173C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-blabby-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CAD186E4FB56BF19B127A3F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-blabby/Pods-blabby-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3869EA51CDE658975E94F689 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-blabbyTests/Pods-blabbyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D01C22F475B9ACBD8DBBA95 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-blabbyUITests/Pods-blabbyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		780EDA1E77CF8AE4E63D456B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-blabby/Pods-blabby-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-blabby/Pods-blabby-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		999E7CEF2EACC1BB7CAD2B4D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-blabbyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABDB2EC726D8235D9EC8E9BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-blabbyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5007715FF00A045B61BBE6A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-blabbyTests/Pods-blabbyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7C50EBB356B72358C30D1BA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-blabbyUITests/Pods-blabbyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FFAF1A481EE9BC8E00AB1512 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB0F984F1F9A13BB0097A7CB /* LoginViewController.swift in Sources */,
+				04AC01BB1EED7AE10019CE1B /* RecordCollectionViewCell.swift in Sources */,
+				FFAF1A521EE9BC8E00AB1512 /* ViewController.swift in Sources */,
+				FB6372C01F1E9E030069F3A1 /* Record.swift in Sources */,
+				FFAF1A581EE9BC8E00AB1512 /* blabby.xcdatamodeld in Sources */,
+				FFAF1A501EE9BC8E00AB1512 /* AppDelegate.swift in Sources */,
+				FB73B1531F9DF97500C1B8EA /* LaunchScreenViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFAF1A5F1EE9BC8E00AB1512 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFAF1A681EE9BC8E00AB1512 /* blabbyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFAF1A6A1EE9BC8E00AB1512 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFAF1A731EE9BC8E00AB1512 /* blabbyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FFAF1A651EE9BC8E00AB1512 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFAF1A4B1EE9BC8E00AB1512 /* blabby */;
+			targetProxy = FFAF1A641EE9BC8E00AB1512 /* PBXContainerItemProxy */;
+		};
+		FFAF1A701EE9BC8E00AB1512 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFAF1A4B1EE9BC8E00AB1512 /* blabby */;
+			targetProxy = FFAF1A6F1EE9BC8E00AB1512 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FFAF1A531EE9BC8E00AB1512 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFAF1A541EE9BC8E00AB1512 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FFAF1A5B1EE9BC8E00AB1512 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFAF1A5C1EE9BC8E00AB1512 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FFAF1A751EE9BC8E00AB1512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FFAF1A761EE9BC8E00AB1512 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FFAF1A781EE9BC8E00AB1512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18A0CF44728AA5C82AEDCFAF /* Pods-blabby.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = blabby/blabby.entitlements;
+				DEVELOPMENT_TEAM = KDMH53532J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods",
+				);
+				INFOPLIST_FILE = blabby/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.blabby;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FFAF1A791EE9BC8E00AB1512 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2894A995D41E14FC322430F7 /* Pods-blabby.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = blabby/blabby.entitlements;
+				DEVELOPMENT_TEAM = KDMH53532J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods",
+				);
+				INFOPLIST_FILE = blabby/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.blabby;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		FFAF1A7B1EE9BC8E00AB1512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EBA7D9B25903BF880F413D8 /* Pods-blabbyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = KDMH53532J;
+				INFOPLIST_FILE = blabbyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashutosh.blabbyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/blabby.app/blabby";
+			};
+			name = Debug;
+		};
+		FFAF1A7C1EE9BC8E00AB1512 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DFEE0A0B9F6EF87E1D6C1DC /* Pods-blabbyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = KDMH53532J;
+				INFOPLIST_FILE = blabbyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashutosh.blabbyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/blabby.app/blabby";
+			};
+			name = Release;
+		};
+		FFAF1A7E1EE9BC8E00AB1512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A5EB0C62BC624B3635BD13F /* Pods-blabbyUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = KDMH53532J;
+				INFOPLIST_FILE = blabbyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashutosh.blabbyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = blabby;
+			};
+			name = Debug;
+		};
+		FFAF1A7F1EE9BC8E00AB1512 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B992899BFC974174064A2AC /* Pods-blabbyUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = KDMH53532J;
+				INFOPLIST_FILE = blabbyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashutosh.blabbyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = blabby;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FFAF1A471EE9BC8E00AB1512 /* Build configuration list for PBXProject "blabby" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFAF1A751EE9BC8E00AB1512 /* Debug */,
+				FFAF1A761EE9BC8E00AB1512 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFAF1A771EE9BC8E00AB1512 /* Build configuration list for PBXNativeTarget "blabby" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFAF1A781EE9BC8E00AB1512 /* Debug */,
+				FFAF1A791EE9BC8E00AB1512 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFAF1A7A1EE9BC8E00AB1512 /* Build configuration list for PBXNativeTarget "blabbyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFAF1A7B1EE9BC8E00AB1512 /* Debug */,
+				FFAF1A7C1EE9BC8E00AB1512 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFAF1A7D1EE9BC8E00AB1512 /* Build configuration list for PBXNativeTarget "blabbyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFAF1A7E1EE9BC8E00AB1512 /* Debug */,
+				FFAF1A7F1EE9BC8E00AB1512 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FFAF1A561EE9BC8E00AB1512 /* blabby.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FFAF1A571EE9BC8E00AB1512 /* blabby.xcdatamodel */,
+			);
+			currentVersion = FFAF1A571EE9BC8E00AB1512 /* blabby.xcdatamodel */;
+			path = blabby.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FFAF1A441EE9BC8E00AB1512 /* Project object */;
+}
