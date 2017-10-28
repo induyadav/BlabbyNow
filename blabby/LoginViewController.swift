@@ -10,7 +10,7 @@ import FirebaseAuth
 import Firebase
 import FirebaseDatabase
 
-
+//test commit ashutosh mane//
 
 class LoginViewController: UIViewController{
    //object of data model cladd my info
