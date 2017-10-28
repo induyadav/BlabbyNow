@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class RecordCollectionViewCell: UICollectionViewCell
 {
    
-    
+    var users = [User]()
     @IBOutlet weak var roundedImage: UIImageView!
 
     override func layoutSubviews() {
@@ -26,5 +28,7 @@ class RecordCollectionViewCell: UICollectionViewCell
     }
     
     @IBOutlet weak var myLabel: UILabel!
+   
     
+   
 }

@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import Firebase
+import FirebaseDatabase
 
 
 
@@ -18,9 +19,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var audioRecorder:AVAudioRecorder?
     let reuseIdentifier = "Collection_Cell"
     
+    var users = [User]()
     
     //Identifier for cell
-    var names : [String] = ["veena", "reema", "mukesh", "babita", "alita", "phuggi"]
+    
 
     
     
@@ -35,13 +37,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
     override func viewDidLoad()
-    {   RecordCollectionView.dataSource = self
+    {
+        
+        RecordCollectionView.dataSource = self
         RecordCollectionView.delegate=self
         super.viewDidLoad()
-        for i in names
-        {   names.append(i) }
-        
-       
         
         // guestures
         let oneTap = UITapGestureRecognizer(target: self, action : #selector(ViewController.playRecording(_:)))
@@ -58,19 +58,39 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let sendOneTap = UITapGestureRecognizer(target: self, action : #selector(ViewController.SendRecordingToCoreData(_:)))
         sendRecording.addGestureRecognizer(sendOneTap)
 
-        
+       fetchUser()
         
     }
     
     
-    
+    func fetchUser() {
+        Database.database().reference().child("users").observe(.childAdded, with: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                let user = User(dictionary: dictionary)
+                user.id = snapshot.key
+                self.users.append(user)
+                print(user.name!, user.number!)
+                //this will crash because of background thread, so lets use dispatch_async to fix
+                DispatchQueue.main.async(execute: {
+                    self.RecordCollectionView.reloadData()
+                })
+                
+                //                user.name = dictionary["name"]
+            }
+            
+        }, withCancel: nil)
+    }
+
     
     // collectionviewcell components
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{return 6}
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{return users.count }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {  let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as UICollectionViewCell
         if let textCell = cell as? RecordCollectionViewCell{
-            textCell.myLabel.text = String(self.names[indexPath.row])
+            let user = users[indexPath.row]
+            
+                textCell.myLabel.text = user.name 
             textCell.roundedImage.image = #imageLiteral(resourceName: "image1") }
         return cell
     }

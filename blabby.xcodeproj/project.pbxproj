@@ -14,6 +14,7 @@
 		FB0F984F1F9A13BB0097A7CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F984E1F9A13BB0097A7CB /* LoginViewController.swift */; };
 		FB56B2C71F7A494C0065739C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB56B2C51F7A487E0065739C /* CoreData.framework */; };
 		FB6372C01F1E9E030069F3A1 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6372BF1F1E9E030069F3A1 /* Record.swift */; };
+		FB6D79001FA4A00C00CF7DAE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6D78FF1FA4A00C00CF7DAE /* User.swift */; };
 		FB73B1501F9DB11600C1B8EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB73B14F1F9DB11600C1B8EA /* GoogleService-Info.plist */; };
 		FB73B1531F9DF97500C1B8EA /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB73B1511F9DF97500C1B8EA /* LaunchScreenViewController.swift */; };
 		FB73B1541F9DF97500C1B8EA /* LaunchScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB73B1521F9DF97500C1B8EA /* LaunchScreenViewController.xib */; };
@@ -22,7 +23,6 @@
 		FFAF1A501EE9BC8E00AB1512 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF1A4F1EE9BC8E00AB1512 /* AppDelegate.swift */; };
 		FFAF1A521EE9BC8E00AB1512 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF1A511EE9BC8E00AB1512 /* ViewController.swift */; };
 		FFAF1A551EE9BC8E00AB1512 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFAF1A531EE9BC8E00AB1512 /* Main.storyboard */; };
-		FFAF1A581EE9BC8E00AB1512 /* blabby.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FFAF1A561EE9BC8E00AB1512 /* blabby.xcdatamodeld */; };
 		FFAF1A5A1EE9BC8E00AB1512 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFAF1A591EE9BC8E00AB1512 /* Assets.xcassets */; };
 		FFAF1A5D1EE9BC8E00AB1512 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFAF1A5B1EE9BC8E00AB1512 /* LaunchScreen.storyboard */; };
 		FFAF1A681EE9BC8E00AB1512 /* blabbyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF1A671EE9BC8E00AB1512 /* blabbyTests.swift */; };
@@ -62,6 +62,7 @@
 		FB0F984E1F9A13BB0097A7CB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FB56B2C51F7A487E0065739C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FB6372BF1F1E9E030069F3A1 /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		FB6D78FF1FA4A00C00CF7DAE /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FB73B14F1F9DB11600C1B8EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB73B1511F9DF97500C1B8EA /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		FB73B1521F9DF97500C1B8EA /* LaunchScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreenViewController.xib; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		FFAF1A4F1EE9BC8E00AB1512 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFAF1A511EE9BC8E00AB1512 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FFAF1A541EE9BC8E00AB1512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FFAF1A571EE9BC8E00AB1512 /* blabby.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = blabby.xcdatamodel; sourceTree = "<group>"; };
 		FFAF1A591EE9BC8E00AB1512 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFAF1A5C1EE9BC8E00AB1512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFAF1A5E1EE9BC8E00AB1512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -125,7 +125,6 @@
 				FFAF1A5B1EE9BC8E00AB1512 /* LaunchScreen.storyboard */,
 				FB73B14F1F9DB11600C1B8EA /* GoogleService-Info.plist */,
 				FFAF1A5E1EE9BC8E00AB1512 /* Info.plist */,
-				FFAF1A561EE9BC8E00AB1512 /* blabby.xcdatamodeld */,
 			);
 			name = "supporting files";
 			sourceTree = "<group>";
@@ -156,9 +155,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FB6D78FE1FA49FB600CF7DAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FB6D78FF1FA4A00C00CF7DAE /* User.swift */,
+			);
+			name = Model;
+			path = blabby;
+			sourceTree = "<group>";
+		};
 		FFAF1A431EE9BC8E00AB1512 = {
 			isa = PBXGroup;
 			children = (
+				FB6D78FE1FA49FB600CF7DAE /* Model */,
 				FFAF1A4E1EE9BC8E00AB1512 /* blabby */,
 				FFAF1A661EE9BC8E00AB1512 /* blabbyTests */,
 				FFAF1A711EE9BC8E00AB1512 /* blabbyUITests */,
@@ -533,7 +542,7 @@
 				04AC01BB1EED7AE10019CE1B /* RecordCollectionViewCell.swift in Sources */,
 				FFAF1A521EE9BC8E00AB1512 /* ViewController.swift in Sources */,
 				FB6372C01F1E9E030069F3A1 /* Record.swift in Sources */,
-				FFAF1A581EE9BC8E00AB1512 /* blabby.xcdatamodeld in Sources */,
+				FB6D79001FA4A00C00CF7DAE /* User.swift in Sources */,
 				FFAF1A501EE9BC8E00AB1512 /* AppDelegate.swift in Sources */,
 				FB73B1531F9DF97500C1B8EA /* LaunchScreenViewController.swift in Sources */,
 			);
@@ -825,19 +834,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		FFAF1A561EE9BC8E00AB1512 /* blabby.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				FFAF1A571EE9BC8E00AB1512 /* blabby.xcdatamodel */,
-			);
-			currentVersion = FFAF1A571EE9BC8E00AB1512 /* blabby.xcdatamodel */;
-			path = blabby.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = FFAF1A441EE9BC8E00AB1512 /* Project object */;
 }

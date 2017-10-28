@@ -8,6 +8,7 @@
 import  UIKit
 import FirebaseAuth
 import Firebase
+import FirebaseDatabase
 
 
 
@@ -15,6 +16,26 @@ class LoginViewController: UIViewController{
    //object of data model cladd my info
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+ 
+    }
+    
+    func registerUser() {
+      
+        guard let name = Username.text,let number = Mobileno.text
+            else { print("form not valid")
+                return}
+        let values = ["name" : name, "number" : number]
+        let ref = Database.database().reference(fromURL: "https://blabby-126d8.firebaseio.com/" )
+        let usersReference = ref.child("Users").childByAutoId()
+        usersReference.updateChildValues(values) { (err, ref) in
+            if (err != nil) {
+                print(String(describing: LocalizedError.self))
+                return
+            }
+            print("user registertered successfully into firbase db")
+        }
     }
     
     @IBOutlet weak var UsernameLabel: UILabel!
@@ -64,7 +85,7 @@ class LoginViewController: UIViewController{
             } else{
                 print("Phone no: \(String(describing: user?.phoneNumber))")
                 self.performSegue(withIdentifier: "code", sender: Any?.self)
-                
+                self.registerUser()
                 
             }
         }
