@@ -11,11 +11,9 @@
         <attribute name="userFavTimeRecieved" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="MyInfo" representedClassName="MyInfo" syncable="YES" codeGenerationType="class">
-        <attribute name="userDOB" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="userDP" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="userScore" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profilePic" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="MySetting" representedClassName="MySetting" syncable="YES" codeGenerationType="class">
         <attribute name="userAutoGossip" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -38,7 +36,7 @@
     <elements>
         <element name="MyContacts" positionX="-101" positionY="-18" width="128" height="75"/>
         <element name="MyFavRec" positionX="88" positionY="-114" width="128" height="105"/>
-        <element name="MyInfo" positionX="-101" positionY="-216" width="128" height="120"/>
+        <element name="MyInfo" positionX="-101" positionY="-216" width="128" height="90"/>
         <element name="MySetting" positionX="-288" positionY="-118" width="128" height="118"/>
         <element name="RecievedRecordingInfo" positionX="45" positionY="72" width="128" height="75"/>
         <element name="SentHistory" positionX="-432" positionY="81" width="128" height="60"/>
