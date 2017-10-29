@@ -12,7 +12,10 @@ import FirebaseDatabase
 
 class RecordCollectionViewCell: UICollectionViewCell
 {
-   
+    
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(code:) has not implemented")
+//    }
     var users = [User]()
     @IBOutlet weak var roundedImage: UIImageView!
 

@@ -94,14 +94,7 @@ class LoginViewController: UIViewController{
     
 
     
-//    PhoneAuthProvider.provider().verifyPhoneNumber(Mobileno.text, uiDelegate: nil) { (verificationID, error) in
-//    if let error = error {
-//    self.showMessagePrompt(error.localizedDescription)
-//    return
-//    }
-//    // Sign in using the verificationID and the code sent to the user
-//    // ...
-//   }
+
     
     
 }
