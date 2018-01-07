@@ -23,8 +23,6 @@
 		FFAF1A521EE9BC8E00AB1512 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF1A511EE9BC8E00AB1512 /* ViewController.swift */; };
 		FFAF1A551EE9BC8E00AB1512 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFAF1A531EE9BC8E00AB1512 /* Main.storyboard */; };
 		FFAF1A5A1EE9BC8E00AB1512 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFAF1A591EE9BC8E00AB1512 /* Assets.xcassets */; };
-		FFAF1A681EE9BC8E00AB1512 /* blabbyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF1A671EE9BC8E00AB1512 /* blabbyTests.swift */; };
-		FFAF1A731EE9BC8E00AB1512 /* blabbyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF1A721EE9BC8E00AB1512 /* blabbyUITests.swift */; };
 		FFCAE3041F02A185001B7F25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFCAE3031F02A185001B7F25 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -70,11 +68,7 @@
 		FFAF1A591EE9BC8E00AB1512 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFAF1A5E1EE9BC8E00AB1512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFAF1A631EE9BC8E00AB1512 /* blabbyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blabbyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FFAF1A671EE9BC8E00AB1512 /* blabbyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blabbyTests.swift; sourceTree = "<group>"; };
-		FFAF1A691EE9BC8E00AB1512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFAF1A6E1EE9BC8E00AB1512 /* blabbyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blabbyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FFAF1A721EE9BC8E00AB1512 /* blabbyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blabbyUITests.swift; sourceTree = "<group>"; };
-		FFAF1A741EE9BC8E00AB1512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFCAE3031F02A185001B7F25 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FFCAE3051F037E01001B7F25 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FFCAE3071F037E13001B7F25 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -164,8 +158,6 @@
 			children = (
 				FB6D78FE1FA49FB600CF7DAE /* Model */,
 				FFAF1A4E1EE9BC8E00AB1512 /* blabby */,
-				FFAF1A661EE9BC8E00AB1512 /* blabbyTests */,
-				FFAF1A711EE9BC8E00AB1512 /* blabbyUITests */,
 				FFAF1A4D1EE9BC8E00AB1512 /* Products */,
 				04AC4A881EF6C6160055168C /* Frameworks */,
 				F75FC1879C398BE23A145726 /* Pods */,
@@ -194,24 +186,6 @@
 				04AC01B71EEC16860019CE1B /* supporting files */,
 			);
 			path = blabby;
-			sourceTree = "<group>";
-		};
-		FFAF1A661EE9BC8E00AB1512 /* blabbyTests */ = {
-			isa = PBXGroup;
-			children = (
-				FFAF1A671EE9BC8E00AB1512 /* blabbyTests.swift */,
-				FFAF1A691EE9BC8E00AB1512 /* Info.plist */,
-			);
-			path = blabbyTests;
-			sourceTree = "<group>";
-		};
-		FFAF1A711EE9BC8E00AB1512 /* blabbyUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FFAF1A721EE9BC8E00AB1512 /* blabbyUITests.swift */,
-				FFAF1A741EE9BC8E00AB1512 /* Info.plist */,
-			);
-			path = blabbyUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -544,7 +518,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFAF1A681EE9BC8E00AB1512 /* blabbyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,7 +525,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFAF1A731EE9BC8E00AB1512 /* blabbyUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
