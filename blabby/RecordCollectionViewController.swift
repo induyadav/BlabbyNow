@@ -8,13 +8,13 @@
 
 import UIKit
 
-
 let reuseIdentifier = "Collection Cell"
 
 var users = [User]()
 
 class RecordCollectionViewController: UICollectionViewController {
-
+    
+    
     @IBOutlet weak var recordCollectionViewOutlet: UICollectionView!
     
     override func viewDidLoad() {
