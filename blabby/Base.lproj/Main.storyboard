@@ -141,10 +141,10 @@
             </objects>
             <point key="canvasLocation" x="-2083.125" y="-200.70422535211267"/>
         </scene>
-        <!--View Controller-->
+        <!--Record View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="blabby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordViewController" customModule="blabby" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -190,59 +190,13 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="send"/>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ezb-8o-plf" userLabel="Record Collection View">
-                                <rect key="frame" x="0.0" y="129" width="320" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="11.25" minimumInteritemSpacing="11.25" id="Cfu-Zm-Gxh">
-                                    <size key="itemSize" width="78" height="105"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Collection_Cell" id="AlW-t8-Jik" customClass="RecordCollectionViewCell" customModule="blabby" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="7.5" width="78" height="105"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="78" height="105"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAU-lX-dPy">
-                                                    <rect key="frame" x="15" y="82" width="44" height="21"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <accessibility key="accessibilityConfiguration" identifier="myLabel"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="bf3-WW-vd4"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CLF-QE-Lni">
-                                                    <rect key="frame" x="0.0" y="1" width="78" height="78"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </imageView>
-                                            </subviews>
-                                        </view>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="jAU-lX-dPy" firstAttribute="top" secondItem="CLF-QE-Lni" secondAttribute="bottom" constant="3" id="I3a-ZB-8Dd"/>
-                                            <constraint firstItem="CLF-QE-Lni" firstAttribute="leading" secondItem="AlW-t8-Jik" secondAttribute="leading" id="Tnv-Sf-LAd"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="jAU-lX-dPy" secondAttribute="bottom" constant="-6" id="eGv-pU-APh"/>
-                                            <constraint firstAttribute="trailing" secondItem="CLF-QE-Lni" secondAttribute="trailing" id="fLo-A9-fUI"/>
-                                            <constraint firstItem="jAU-lX-dPy" firstAttribute="leading" secondItem="AlW-t8-Jik" secondAttribute="leadingMargin" constant="7" id="wCm-Mf-Xa3"/>
-                                            <constraint firstItem="CLF-QE-Lni" firstAttribute="top" secondItem="AlW-t8-Jik" secondAttribute="topMargin" constant="-7" id="wpS-r7-0gP"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="jAU-lX-dPy" secondAttribute="trailing" constant="11" id="zFi-SD-AZt"/>
-                                        </constraints>
-                                        <size key="customSize" width="78" height="105"/>
-                                        <connections>
-                                            <outlet property="myLabel" destination="jAU-lX-dPy" id="r6W-JW-x10"/>
-                                            <outlet property="roundedImage" destination="CLF-QE-Lni" id="LCO-vx-stW"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q2m-NB-Pdh">
+                                <rect key="frame" x="0.0" y="144" width="320" height="120"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="YDG-Ef-rG6" kind="embed" id="aPk-Sa-0Nc"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -268,7 +222,84 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1031" y="-201"/>
+            <point key="canvasLocation" x="-1307" y="-201"/>
+        </scene>
+        <!--Record Collection View Controller-->
+        <scene sceneID="i0g-ZC-iPy">
+            <objects>
+                <viewController id="YDG-Ef-rG6" customClass="RecordCollectionViewController" customModule="blabby" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kFj-cm-tav">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ezb-8o-plf" userLabel="Record Collection View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="11.25" minimumInteritemSpacing="11.25" id="Cfu-Zm-Gxh">
+                                    <size key="itemSize" width="78" height="105"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Collection Cell" id="AlW-t8-Jik" customClass="RecordCollectionViewCell" customModule="blabby" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="8" width="78" height="105"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="78" height="105"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAU-lX-dPy">
+                                                    <rect key="frame" x="7" y="74" width="60" height="21"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="myLabel"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="5vH-tn-3nv"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CLF-QE-Lni">
+                                                    <rect key="frame" x="0.0" y="9" width="78" height="62"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="CLF-QE-Lni" secondAttribute="trailing" id="2vc-cP-KmK"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="jAU-lX-dPy" secondAttribute="bottom" constant="2" id="HuH-Hd-zoJ"/>
+                                            <constraint firstItem="jAU-lX-dPy" firstAttribute="top" secondItem="CLF-QE-Lni" secondAttribute="bottom" constant="3" id="Q4C-y1-mmX"/>
+                                            <constraint firstItem="CLF-QE-Lni" firstAttribute="leading" secondItem="AlW-t8-Jik" secondAttribute="leading" id="QP9-z9-zHK"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="jAU-lX-dPy" secondAttribute="trailing" constant="3" id="azg-l1-7VX"/>
+                                            <constraint firstItem="jAU-lX-dPy" firstAttribute="leading" secondItem="AlW-t8-Jik" secondAttribute="leadingMargin" constant="-1" id="b5q-hb-rb2"/>
+                                            <constraint firstItem="CLF-QE-Lni" firstAttribute="top" secondItem="AlW-t8-Jik" secondAttribute="topMargin" constant="1" id="lBV-Mo-qmq"/>
+                                        </constraints>
+                                        <size key="customSize" width="78" height="105"/>
+                                        <connections>
+                                            <outlet property="myLabel" destination="jAU-lX-dPy" id="r6W-JW-x10"/>
+                                            <outlet property="roundedImage" destination="CLF-QE-Lni" id="LCO-vx-stW"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ezb-8o-plf" firstAttribute="leading" secondItem="kFj-cm-tav" secondAttribute="leading" id="aJF-QL-h9x"/>
+                            <constraint firstItem="Ezb-8o-plf" firstAttribute="top" secondItem="kFj-cm-tav" secondAttribute="top" id="diN-to-ykJ"/>
+                            <constraint firstAttribute="bottom" secondItem="Ezb-8o-plf" secondAttribute="bottom" id="tfy-kw-JXm"/>
+                            <constraint firstAttribute="trailing" secondItem="Ezb-8o-plf" secondAttribute="trailing" id="uin-Rb-Pk8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="recordCollectionViewOutlet" destination="Ezb-8o-plf" id="ESx-aG-vn0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbT-JC-P3K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-506" y="-334"/>
         </scene>
     </scenes>
     <resources>

@@ -34,7 +34,7 @@ class LoginViewController: UIViewController{
                 print(String(describing: LocalizedError.self))
                 return
             }
-            print("user registertered successfully into firbase db")
+            print("user registered successfully into firbase db")
         }
     }
     
@@ -84,12 +84,25 @@ class LoginViewController: UIViewController{
                 print((String(describing:error?.localizedDescription)))
             } else{
                 print("Phone no: \(String(describing: user?.phoneNumber))")
-                self.performSegue(withIdentifier: "code", sender: Any?.self)
-                self.registerUser()
-                
+              
+                    do
+                    {
+                       try self.performSegue(withIdentifier: "code", sender: self)
+                        self.registerUser()
+                    }
+                     catch
+                        {
+                        print("error")
+                        }
+                    
+                    
+                }
             }
         }
-    }
+    
+
+
+}
    
     
 
@@ -97,4 +110,4 @@ class LoginViewController: UIViewController{
 
     
     
-}
+

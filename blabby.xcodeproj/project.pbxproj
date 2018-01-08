@@ -11,6 +11,7 @@
 		6E1AB111C5648C55A8636E63 /* Pods_blabbyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A099D1D361F49A7D77C6578F /* Pods_blabbyUITests.framework */; };
 		8FE85E1CD667E8CD5D7E46BC /* Pods_blabby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A5B246E630B4668F50F952 /* Pods_blabby.framework */; };
 		9F5E7E66858F0BA4CA7ADA17 /* Pods_blabbyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F102E983E33D1FAA72F2E52 /* Pods_blabbyTests.framework */; };
+		C56DC72920036931003FE773 /* RecordCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56DC72820036931003FE773 /* RecordCollectionViewController.swift */; };
 		FB0F984F1F9A13BB0097A7CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F984E1F9A13BB0097A7CB /* LoginViewController.swift */; };
 		FB56B2C71F7A494C0065739C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB56B2C51F7A487E0065739C /* CoreData.framework */; };
 		FB6372C01F1E9E030069F3A1 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6372BF1F1E9E030069F3A1 /* Record.swift */; };
@@ -20,7 +21,7 @@
 		FBFFF93C1F790D6B0074AA06 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFCAE3071F037E13001B7F25 /* CFNetwork.framework */; };
 		FBFFF93D1F790D710074AA06 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFCAE3051F037E01001B7F25 /* SystemConfiguration.framework */; };
 		FFAF1A501EE9BC8E00AB1512 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF1A4F1EE9BC8E00AB1512 /* AppDelegate.swift */; };
-		FFAF1A521EE9BC8E00AB1512 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF1A511EE9BC8E00AB1512 /* ViewController.swift */; };
+		FFAF1A521EE9BC8E00AB1512 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF1A511EE9BC8E00AB1512 /* RecordViewController.swift */; };
 		FFAF1A551EE9BC8E00AB1512 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFAF1A531EE9BC8E00AB1512 /* Main.storyboard */; };
 		FFAF1A5A1EE9BC8E00AB1512 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFAF1A591EE9BC8E00AB1512 /* Assets.xcassets */; };
 		FFCAE3041F02A185001B7F25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFCAE3031F02A185001B7F25 /* GoogleService-Info.plist */; };
@@ -54,6 +55,7 @@
 		7A5EB0C62BC624B3635BD13F /* Pods-blabbyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blabbyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-blabbyUITests/Pods-blabbyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7DFEE0A0B9F6EF87E1D6C1DC /* Pods-blabbyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blabbyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-blabbyTests/Pods-blabbyTests.release.xcconfig"; sourceTree = "<group>"; };
 		A099D1D361F49A7D77C6578F /* Pods_blabbyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_blabbyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C56DC72820036931003FE773 /* RecordCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCollectionViewController.swift; sourceTree = "<group>"; };
 		C7A5B246E630B4668F50F952 /* Pods_blabby.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_blabby.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0F984E1F9A13BB0097A7CB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FB56B2C51F7A487E0065739C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -63,7 +65,7 @@
 		FB73B1521F9DF97500C1B8EA /* LaunchScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreenViewController.xib; sourceTree = "<group>"; };
 		FFAF1A4C1EE9BC8E00AB1512 /* blabby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blabby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFAF1A4F1EE9BC8E00AB1512 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FFAF1A511EE9BC8E00AB1512 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FFAF1A511EE9BC8E00AB1512 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		FFAF1A541EE9BC8E00AB1512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFAF1A591EE9BC8E00AB1512 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFAF1A5E1EE9BC8E00AB1512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -178,7 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				FB0F984E1F9A13BB0097A7CB /* LoginViewController.swift */,
-				FFAF1A511EE9BC8E00AB1512 /* ViewController.swift */,
+				FFAF1A511EE9BC8E00AB1512 /* RecordViewController.swift */,
+				C56DC72820036931003FE773 /* RecordCollectionViewController.swift */,
 				04AC01BA1EED7AE10019CE1B /* RecordCollectionViewCell.swift */,
 				FFAF1A531EE9BC8E00AB1512 /* Main.storyboard */,
 				FFAF1A4F1EE9BC8E00AB1512 /* AppDelegate.swift */,
@@ -505,9 +508,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C56DC72920036931003FE773 /* RecordCollectionViewController.swift in Sources */,
 				FB0F984F1F9A13BB0097A7CB /* LoginViewController.swift in Sources */,
 				04AC01BB1EED7AE10019CE1B /* RecordCollectionViewCell.swift in Sources */,
-				FFAF1A521EE9BC8E00AB1512 /* ViewController.swift in Sources */,
+				FFAF1A521EE9BC8E00AB1512 /* RecordViewController.swift in Sources */,
 				FB6372C01F1E9E030069F3A1 /* Record.swift in Sources */,
 				FB6D79001FA4A00C00CF7DAE /* User.swift in Sources */,
 				FFAF1A501EE9BC8E00AB1512 /* AppDelegate.swift in Sources */,

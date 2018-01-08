@@ -16,12 +16,13 @@ class RecordCollectionViewCell: UICollectionViewCell
 //    required init?(coder aDecoder: NSCoder) {
 //        fatalError("init(code:) has not implemented")
 //    }
-    var users = [User]()
+   
+    
+    @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var roundedImage: UIImageView!
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         self.makeItCircle()
     }
     
@@ -30,7 +31,7 @@ class RecordCollectionViewCell: UICollectionViewCell
         self.roundedImage.layer.cornerRadius  = CGFloat(roundf(Float(self.roundedImage.frame.size.width/2)))
     }
     
-    @IBOutlet weak var myLabel: UILabel!
+    
    
     
    
