@@ -12,6 +12,7 @@ let reuseIdentifier = "Collection Cell"
 var names = ["asdfg","asdfg","asdfg","asdfg"]
 var users = [User]()
 
+
 class RecordCollectionViewController: UICollectionViewController {
     
     

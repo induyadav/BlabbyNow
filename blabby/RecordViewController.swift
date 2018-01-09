@@ -17,7 +17,7 @@ class RecordViewController: UIViewController
 
 {   //the colour of the status bar
     var audioRecorder:AVAudioRecorder?
-    
+    var users = [User]()
     
     //Identifier for cell
     
@@ -59,39 +59,46 @@ class RecordViewController: UIViewController
        
         
         let uid = Auth.auth().currentUser?.uid
-        Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+        Database.database().reference().child("Users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+           print("uid is  \(uid!)")
+
             print(snapshot)
         if (snapshot.value as? [String: AnyObject]) != nil{
-            print(snapshot.self)
+            print(" this is the user id snapshot \(snapshot.self)")
+
         }
     }, withCancel : nil)
      
       
         
-//        Database.database().reference().child("users").observe(.childAdded, with: { (snapshot) in
-//            
-//            if let dictionary = snapshot.value as? [String: AnyObject] {
-//                let user = User(dictionary: dictionary)
-//                
-//                user.name = dictionary["name"] as? String
-//                user.number = dictionary["number"] as? String
-//                print("fetch user accessed")
-//                
-//                user.id = snapshot.key
-//                self.users.append(user)
-//                print(user.name!, user.number!)
-//                //this will crash because of background thread, so lets use dispatch_async to fix
-//                
+        Database.database().reference().child("Users").observe(.childAdded, with: { (snapshot) in
+            
+            if let snapshotSaved = snapshot.value as? [String: AnyObject] {
+            
+            //model being initialised
+                let user = User(dictionary: snapshotSaved)
+                user.name = snapshotSaved["name"] as? String
+                user.number = snapshotSaved["number"] as? String
+                print("fetch user accessed")
+                print(snapshotSaved)
+                
+                user.id = snapshot.key
+                self.users.append(user)
+                print(user.name!, user.number!)
+                
+                
+                //this will crash because of background thread, so lets use dispatch_async to fix
+                
 //                DispatchQueue.main.async(execute: {
-//                    self.RecordCollectionView.reloadData()
-//                    
-//                    
+//                RecordCollectionViewController.RecordCollectionView.reloadData()
+//
+                
 //                })
 //                
-//                
-//            }
-//            
-//        }, withCancel: nil)
+                
+            }
+            
+        }, withCancel: nil)
         
     }
     

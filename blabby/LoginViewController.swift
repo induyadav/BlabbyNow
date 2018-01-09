@@ -28,7 +28,7 @@ class LoginViewController: UIViewController{
                 return}
         let values = ["name" : name, "number" : number]
         let ref = Database.database().reference(fromURL: "https://blabby-126d8.firebaseio.com/" )
-        let usersReference = ref.child("Users").childByAutoId()
+        let usersReference = ref.child("Users").child(name)
         usersReference.updateChildValues(values) { (err, ref) in
             if (err != nil) {
                 print(String(describing: LocalizedError.self))
