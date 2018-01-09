@@ -12,6 +12,7 @@
 		8FE85E1CD667E8CD5D7E46BC /* Pods_blabby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A5B246E630B4668F50F952 /* Pods_blabby.framework */; };
 		9F5E7E66858F0BA4CA7ADA17 /* Pods_blabbyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F102E983E33D1FAA72F2E52 /* Pods_blabbyTests.framework */; };
 		C56DC72920036931003FE773 /* RecordCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56DC72820036931003FE773 /* RecordCollectionViewController.swift */; };
+		C56DC72B200572C5003FE773 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C56DC72A200572C5003FE773 /* Launch Screen.storyboard */; };
 		FB0F984F1F9A13BB0097A7CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F984E1F9A13BB0097A7CB /* LoginViewController.swift */; };
 		FB56B2C71F7A494C0065739C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB56B2C51F7A487E0065739C /* CoreData.framework */; };
 		FB6372C01F1E9E030069F3A1 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6372BF1F1E9E030069F3A1 /* Record.swift */; };
@@ -56,6 +57,8 @@
 		7DFEE0A0B9F6EF87E1D6C1DC /* Pods-blabbyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blabbyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-blabbyTests/Pods-blabbyTests.release.xcconfig"; sourceTree = "<group>"; };
 		A099D1D361F49A7D77C6578F /* Pods_blabbyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_blabbyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C56DC72820036931003FE773 /* RecordCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCollectionViewController.swift; sourceTree = "<group>"; };
+		C56DC72A200572C5003FE773 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		C56DC72C20057341003FE773 /* yoyoblabAsset-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yoyoblabAsset-1.png"; sourceTree = "<group>"; };
 		C7A5B246E630B4668F50F952 /* Pods_blabby.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_blabby.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0F984E1F9A13BB0097A7CB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FB56B2C51F7A487E0065739C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -116,6 +119,8 @@
 				FFAF1A591EE9BC8E00AB1512 /* Assets.xcassets */,
 				FB73B14F1F9DB11600C1B8EA /* GoogleService-Info.plist */,
 				FFAF1A5E1EE9BC8E00AB1512 /* Info.plist */,
+				C56DC72C20057341003FE773 /* yoyoblabAsset-1.png */,
+				C56DC72A200572C5003FE773 /* Launch Screen.storyboard */,
 			);
 			name = "supporting files";
 			sourceTree = "<group>";
@@ -320,6 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C56DC72B200572C5003FE773 /* Launch Screen.storyboard in Resources */,
 				FFCAE3041F02A185001B7F25 /* GoogleService-Info.plist in Resources */,
 				FB73B1501F9DB11600C1B8EA /* GoogleService-Info.plist in Resources */,
 				FFAF1A5A1EE9BC8E00AB1512 /* Assets.xcassets in Resources */,
