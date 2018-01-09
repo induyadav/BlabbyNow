@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,23 +31,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yoyoblabAsset-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mx5-A1-EWJ">
-                                <rect key="frame" x="116" y="305" width="142" height="157"/>
+                                <rect key="frame" x="105" y="287" width="164" height="132"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="157" id="COs-MC-5xc"/>
+                                    <constraint firstAttribute="height" constant="132" id="QhS-bE-Ewq"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.090196078431372548" green="0.74509803921568629" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="5cz-MP-9tL"/>
-                            <constraint firstItem="Mx5-A1-EWJ" firstAttribute="top" secondItem="GJd-Yh-RWb" secondAttribute="bottom" constant="60" id="F4E-tm-EF2"/>
-                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="centerX" secondItem="GJd-Yh-RWb" secondAttribute="centerX" id="Q3B-4B-g5h"/>
-                            <constraint firstItem="Mx5-A1-EWJ" firstAttribute="centerX" secondItem="GJd-Yh-RWb" secondAttribute="centerX" id="Qih-qY-b0x"/>
-                            <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="20" symbolic="YES" id="SfN-ll-jLj"/>
-                            <constraint firstAttribute="bottom" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="20" id="Y44-ml-fuU"/>
-                            <constraint firstItem="Mx5-A1-EWJ" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="116" id="beY-Xt-vb2"/>
-                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="bottom" multiplier="1/3" constant="1" id="moa-c2-u7t"/>
-                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="20" symbolic="YES" id="x7j-FC-K8j"/>
+                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="182" id="4Us-s7-K04"/>
+                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="trailing" secondItem="obG-Y5-kRd" secondAttribute="trailing" id="87K-Ec-WH9"/>
+                            <constraint firstItem="Mx5-A1-EWJ" firstAttribute="top" secondItem="GJd-Yh-RWb" secondAttribute="bottom" constant="42" id="F1h-8L-75d"/>
+                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="leading" secondItem="obG-Y5-kRd" secondAttribute="leading" id="KQY-5n-D4o"/>
+                            <constraint firstItem="Mx5-A1-EWJ" firstAttribute="centerX" secondItem="GJd-Yh-RWb" secondAttribute="centerX" id="Kk5-bd-SRw"/>
+                            <constraint firstAttribute="trailing" secondItem="GJd-Yh-RWb" secondAttribute="trailing" id="M2w-T9-hNk"/>
+                            <constraint firstItem="Mx5-A1-EWJ" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="105" id="WQI-Br-cAl"/>
+                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="pHr-SV-wS1"/>
+                            <constraint firstAttribute="bottom" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="20" symbolic="YES" id="vIg-CF-ZY4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                     </view>
