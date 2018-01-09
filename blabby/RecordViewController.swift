@@ -41,25 +41,12 @@ class RecordViewController: UIViewController
         super.viewDidLoad()
         
         
-        // guestures
-//        let oneTap = UITapGestureRecognizer(target: self, action : #selector(ViewController.playRecording(_:)))
-//        oneTap.numberOfTapsRequired = 1
-//        self.RecordCollectionView?.addGestureRecognizer(oneTap)
-//        let longPressTap = UILongPressGestureRecognizer(target: self, action: #selector(ViewController.startRecording(_:)))
-//        self.RecordCollectionView?.addGestureRecognizer(longPressTap)
-//        recordButton.addGestureRecognizer(longPressTap)
-//        let swipeUpTap = UISwipeGestureRecognizer(target: self, action:#selector(ViewController.thisIsFavourited(_:)))
-//        swipeUpTap.direction = UISwipeGestureRecognizerDirection.up
-//        self.RecordCollectionView?.addGestureRecognizer(swipeUpTap)
-//        let cancelOneTap  = UITapGestureRecognizer(target: self, action : #selector(ViewController.CancelRecordingToCoreData(_:)))
-//        cancelRecording.addGestureRecognizer(cancelOneTap)
-//        let sendOneTap = UITapGestureRecognizer(target: self, action : #selector(ViewController.SendRecordingToCoreData(_:)))
-//        sendRecording.addGestureRecognizer(sendOneTap)
 
+        
        
         
-        let uid = Auth.auth().currentUser?.uid
-        Database.database().reference().child("Users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+            let uid = Auth.auth().currentUser?.uid
+Database.database().reference().child("Users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
            print("uid is  \(uid!)")
 
             print(snapshot)
@@ -71,7 +58,7 @@ class RecordViewController: UIViewController
      
       
         
-        Database.database().reference().child("Users").observe(.childAdded, with: { (snapshot) in
+            Database.database().reference().child("Users").observe(.childAdded, with: { (snapshot) in
             
             if let snapshotSaved = snapshot.value as? [String: AnyObject] {
             
@@ -108,46 +95,12 @@ class RecordViewController: UIViewController
     
 
     
-    // collectionviewcell components
+  
     
     
     
     
     
-    func playRecording(_:UITapGestureRecognizer!)
-        {
-            print("it is playing recoreding")
-        }
-    func startRecording(_: UILongPressGestureRecognizer!)
-        {
-            print(" started recording")
-        }
-    func stopRecording(_: UITapGestureRecognizer!)
-        {
-            print(" stopped recording")
-        }
-    func SendRecordingToCoreData(_: UITapGestureRecognizer!)->()
-        {
-        if sendRecording.isEnabled{
-            print("sent recording")}
-        }
-    func CancelRecordingToCoreData(_: UITapGestureRecognizer!)->()
-        {   if cancelRecording.isEnabled{
-            print("cancelled recording")}
-        }
-    func thisIsFavourited(_: UISwipeGestureRecognizer!)
-        {
-            print("favourited")
-        }
-    func fetchREcordingFromCoreData()
-        {
-            print("fetching recording")
-        }
-    func showToCollectionViewCell()->()
-        {
-            print("showing recording in collection view")
-        }
-
-
+    
 
 }

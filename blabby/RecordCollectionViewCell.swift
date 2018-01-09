@@ -24,9 +24,11 @@ class RecordCollectionViewCell: UICollectionViewCell
     override func layoutSubviews() {
         super.layoutSubviews()
         self.makeItCircle()
+        
     }
     
     func makeItCircle() {
+        
         self.roundedImage.layer.masksToBounds = true
         self.roundedImage.layer.cornerRadius  = CGFloat(roundf(Float(self.roundedImage.frame.size.width/2)))
     }
