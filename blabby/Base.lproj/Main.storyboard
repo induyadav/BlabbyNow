@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -238,39 +239,37 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" id="O1w-Vx-X9M">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" id="O1w-Vx-X9M" customClass="RecordCollectionViewCell" customModule="blabby" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="122" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="122" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAU-lX-dPy">
-                                            <rect key="frame" x="15" y="79" width="92" height="21"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CLF-QE-Lni">
+                                            <rect key="frame" x="14" y="10" width="94" height="54"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAU-lX-dPy">
+                                            <rect key="frame" x="15" y="85" width="92" height="21"/>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <accessibility key="accessibilityConfiguration" identifier="myLabel"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="vR7-4y-Ml1"/>
+                                                <constraint firstAttribute="width" secondItem="jAU-lX-dPy" secondAttribute="height" multiplier="92:21" id="kCE-nz-h2f"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CLF-QE-Lni">
-                                            <rect key="frame" x="14" y="10" width="94" height="54"/>
-                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </imageView>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="jAU-lX-dPy" firstAttribute="top" secondItem="CLF-QE-Lni" secondAttribute="bottom" constant="15" id="Fj4-MQ-B6U"/>
-                                    <constraint firstItem="CLF-QE-Lni" firstAttribute="leading" secondItem="O1w-Vx-X9M" secondAttribute="leadingMargin" constant="-2" id="Gse-Wp-XZ1"/>
-                                    <constraint firstItem="jAU-lX-dPy" firstAttribute="leading" secondItem="O1w-Vx-X9M" secondAttribute="leadingMargin" constant="-1" id="fga-kN-yP5"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="jAU-lX-dPy" secondAttribute="bottom" constant="20" id="gBr-ue-Tj0"/>
-                                    <constraint firstItem="CLF-QE-Lni" firstAttribute="top" secondItem="O1w-Vx-X9M" secondAttribute="topMargin" constant="-10" id="glc-Du-wPQ"/>
-                                    <constraint firstItem="CLF-QE-Lni" firstAttribute="centerX" secondItem="jAU-lX-dPy" secondAttribute="centerX" id="pPd-kl-LVT"/>
-                                    <constraint firstItem="CLF-QE-Lni" firstAttribute="centerX" secondItem="O1w-Vx-X9M" secondAttribute="centerX" id="vlU-YD-b2I"/>
+                                    <constraint firstItem="jAU-lX-dPy" firstAttribute="top" secondItem="CLF-QE-Lni" secondAttribute="bottom" constant="21" id="3pw-fj-NqZ"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="myLabel" destination="jAU-lX-dPy" id="1xr-Po-fr7"/>
+                                    <outlet property="roundedImage" destination="CLF-QE-Lni" id="Jrb-qP-2f3"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

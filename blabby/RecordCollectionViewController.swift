@@ -9,13 +9,13 @@
 import UIKit
 
 let reuseIdentifier = "Collection Cell"
-
+var names = ["asdfg","asdfg","asdfg","asdfg"]
 var users = [User]()
 
 class RecordCollectionViewController: UICollectionViewController {
     
     
-    @IBOutlet weak var recordCollectionViewOutlet: UICollectionView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,20 +52,29 @@ class RecordCollectionViewController: UICollectionViewController {
     }
 
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{return users.count }
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+        
+        print("names.count=\(names.count)")
+        return names.count
+        
+    }
     
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {  let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as UICollectionViewCell
         if let textCell = cell as? RecordCollectionViewCell{
-            let user = users[indexPath.row]
+//            let user = users[indexPath.row]
             print ("collection view func access")
-            textCell.myLabel?.text = user.name
-            textCell.roundedImage.image = user.profileImageUrl }
+            
+        textCell.myLabel?.text = names[indexPath.row]
+//      textCell.myLabel?.text = user.name
+            textCell.roundedImage.image = #imageLiteral(resourceName: "Image")
+            
+        }
         return cell
     }
 
-
+   
     // MARK: UICollectionViewDelegate
 
     /*

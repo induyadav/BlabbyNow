@@ -85,16 +85,13 @@ class LoginViewController: UIViewController{
             } else{
                 print("Phone no: \(String(describing: user?.phoneNumber))")
               
-                    do
-                    {
-                       try self.performSegue(withIdentifier: "code", sender: self)
-                        self.registerUser()
-                    }
-                     catch
-                        {
-                        print("error")
-                        }
-                    
+                
+                    self.performSegue(withIdentifier: "code", sender: self)
+                    self.registerUser()
+                
+                
+                
+                
                     
                 }
             }
