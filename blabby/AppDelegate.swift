@@ -39,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         
        
         FirebaseApp.configure()
+        Thread.sleep(forTimeInterval: 3.0)
         return true
     
     }
