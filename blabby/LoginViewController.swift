@@ -63,6 +63,7 @@ class LoginViewController: UIViewController{
                 {
                 let defaults = UserDefaults.standard
                 defaults.set(verificationID, forKey: "authVID")
+                    print("verification id is \(String(describing: verificationID))!")
 
                 }
                 }

@@ -152,13 +152,11 @@
 				FB6D78FF1FA4A00C00CF7DAE /* User.swift */,
 			);
 			name = Model;
-			path = blabby;
 			sourceTree = "<group>";
 		};
 		FFAF1A431EE9BC8E00AB1512 = {
 			isa = PBXGroup;
 			children = (
-				FB6D78FE1FA49FB600CF7DAE /* Model */,
 				FFAF1A4E1EE9BC8E00AB1512 /* blabby */,
 				FFAF1A4D1EE9BC8E00AB1512 /* Products */,
 				04AC4A881EF6C6160055168C /* Frameworks */,
@@ -179,6 +177,7 @@
 		FFAF1A4E1EE9BC8E00AB1512 /* blabby */ = {
 			isa = PBXGroup;
 			children = (
+				FB6D78FE1FA49FB600CF7DAE /* Model */,
 				FB0F984E1F9A13BB0097A7CB /* LoginViewController.swift */,
 				FFAF1A511EE9BC8E00AB1512 /* RecordViewController.swift */,
 				C56DC72820036931003FE773 /* RecordCollectionViewController.swift */,
