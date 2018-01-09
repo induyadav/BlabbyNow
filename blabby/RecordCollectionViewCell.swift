@@ -20,6 +20,8 @@ class RecordCollectionViewCell: UICollectionViewCell
     
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var roundedImage: UIImageView!
+    
+     var oneTap:UIGestureRecognizer
 
     override func layoutSubviews() {
         super.layoutSubviews()
