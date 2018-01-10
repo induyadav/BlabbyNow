@@ -10,6 +10,7 @@ import UIKit
 
 let reuseIdentifier = "Collection Cell"
 var names = ["asdfg","asdfg","asdfg","asdfg"]
+var images:[UIImage]=[#imageLiteral(resourceName: "profile 1"),#imageLiteral(resourceName: "profile 2"),#imageLiteral(resourceName: "profile 3"),#imageLiteral(resourceName: "profile 4"),#imageLiteral(resourceName: "profile 5")]
 var users = [User]()
 
 
@@ -73,7 +74,7 @@ class RecordCollectionViewController: UICollectionViewController {
         
         textCell.myLabel?.text = names[indexPath.row]
 //      textCell.myLabel?.text = user.name
-        textCell.roundedImage.image = #imageLiteral(resourceName: "Image")
+        textCell.roundedImage.image = images[indexPath.row]
             
         }
         return cell

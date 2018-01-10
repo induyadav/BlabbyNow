@@ -21,12 +21,13 @@ class RecordCollectionViewCell: UICollectionViewCell
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var roundedImage: UIImageView!
     
-     
+    
     
 
     override func layoutSubviews() {
         super.layoutSubviews()
         self.makeItCircle()
+//        myLabel.addGestureRecognizer(swipeUp)
         
     }
     
