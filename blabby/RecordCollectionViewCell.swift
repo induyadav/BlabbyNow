@@ -22,12 +22,14 @@ class RecordCollectionViewCell: UICollectionViewCell
     @IBOutlet weak var roundedImage: UIImageView!
     
     
+//    let swipeUp = UISwipeGestureRecognizer(target: self, action:#selector(thisIsFavourited(_:)))
     
 
     override func layoutSubviews() {
         super.layoutSubviews()
         self.makeItCircle()
 //        myLabel.addGestureRecognizer(swipeUp)
+//        swipeUp.direction = UISwipeGestureRecognizerDirection.up
         
     }
     
@@ -38,7 +40,9 @@ class RecordCollectionViewCell: UICollectionViewCell
     }
     
     
-   
+    func thisIsFavourited(_:UIGestureRecognizer){
+        print("swiped up")
+    }
     
    
 }

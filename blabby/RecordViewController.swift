@@ -13,15 +13,18 @@ import FirebaseDatabase
 
 
 
-class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate
-
+class RecordViewController: UIViewController, AVAudioRecorderDelegate
 {
     //the colour of the status bar
     var audioRecorder:AVAudioRecorder?
     var users = [User]()
     var blabRecorder:AVAudioRecorder?
-    var blabPlayer:AVAudioPlayer?
-    
+//    public var file:NSURL{
+//        get{
+//            return getFileURL()
+//        }
+//    }
+//    
     //Identifier for cell
     
 
@@ -35,6 +38,11 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPl
     @IBOutlet weak var timerDigit: UILabel!
     
     
+    @IBAction func blabRecord(_ sender: Any)
+    {
+        blabRecorder?.record(forDuration: 8)
+        print("recording audio")
+    }
     
     
     override func viewDidLoad()
@@ -136,7 +144,7 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPl
         
     }
     
-    func getFileURL() -> NSURL{
+     public func getFileURL() -> NSURL{
         print("getFileURL")
         var i=1
         i+=1
