@@ -25,7 +25,7 @@ class RecordCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-            
+        
 
         // Do any additional setup after loading the view.
     }
@@ -79,6 +79,11 @@ class RecordCollectionViewController: UICollectionViewController {
         return cell
     }
 
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        print("clicked")
+        
+    }
    
     
 }
