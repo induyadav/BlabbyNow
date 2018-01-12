@@ -13,7 +13,7 @@ import FirebaseDatabase
 
 
 
-class RecordViewController: UIViewController, AVAudioRecorderDelegate
+class RecordViewController: UIViewController
 {
     //the colour of the status bar
     var audioRecorder:AVAudioRecorder?
@@ -38,23 +38,14 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate
     @IBOutlet weak var timerDigit: UILabel!
     
     
-    @IBAction func blabRecord(_ sender: Any)
-    {
-        blabRecorder?.record(forDuration: 8)
-        print("recording audio")
-    }
+    
     
     
     override func viewDidLoad()
     {
         
         
-        super.viewDidLoad()
-        setupRecorder()
-        
-
-        
-       
+            super.viewDidLoad()
         
             let uid = Auth.auth().currentUser?.uid
             Database.database().reference().child("Users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
@@ -101,63 +92,7 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate
     }
     
     
-    // audio settings
-    func setupRecorder(){
-        print("setupRecorder")
-        
-        var recordSettings = [AVFormatIDKey : kAudioFormatAppleLossless,
-                              AVEncoderAudioQualityKey : AVAudioQuality.max.rawValue,
-                              AVEncoderBitRateKey : 320000,
-                              AVNumberOfChannelsKey : 2,
-                              AVSampleRateKey : 44100.0 ] as [String : Any]
-        
-        var error : NSError?
-        do
-        {
-            blabRecorder =  try AVAudioRecorder(url: getFileURL() as URL, settings: recordSettings as [String:Any])
-        }
-        catch
-        {
-            print(error.localizedDescription)
-        }
-        
-        if let err = error{
-            
-            NSLog("SOmething Wrong")
-        }
-            
-        else {
-            
-            blabRecorder!.delegate = self
-            blabRecorder!.prepareToRecord()
-            
-        }
-        
-    }
     
-    //getting file path
-    func getCacheDirectory() -> String {
-        print("getCacheDirectory")
-        let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true) as! [String]
-        
-        return paths[0]
-        
-    }
-    
-     public func getFileURL() -> NSURL{
-        print("getFileURL")
-        var i=1
-        i+=1
-        var fileName:String="/blab\(i)"
-        
-        let path  = getCacheDirectory()+fileName
-        
-        let filePath = NSURL(fileURLWithPath: path)
-        print(fileName)
-        return filePath
-    }
-    
-
     
   
     

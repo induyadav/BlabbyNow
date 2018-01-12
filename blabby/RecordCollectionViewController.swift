@@ -7,15 +7,15 @@
 //
 
 import UIKit
-import AVFoundation
+
 
 let reuseIdentifier = "Collection Cell"
 var names = ["asdfg","asdfg","asdfg","asdfg"]
 var images:[UIImage]=[#imageLiteral(resourceName: "profile 1"),#imageLiteral(resourceName: "profile 2"),#imageLiteral(resourceName: "profile 3"),#imageLiteral(resourceName: "profile 4"),#imageLiteral(resourceName: "profile 5")]
 var users = [User]()
-var blabPlayer:AVAudioPlayer?
 
-class RecordCollectionViewController: UICollectionViewController, AVAudioPlayerDelegate
+
+class RecordCollectionViewController: UICollectionViewController
 {
     
     
@@ -84,38 +84,12 @@ class RecordCollectionViewController: UICollectionViewController, AVAudioPlayerD
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-        preparePlayer()
-        if blabPlayer?.isPlaying == true
-        {
-            blabPlayer?.stop()
-        }
-        else
-        {
-            
-            blabPlayer?.play()
-        }
+       
         
         print("clicked")
         
     }
     
-    //setup of audio player
-    func preparePlayer(){
-        
-        var error : NSError?
-//        blabPlayer = AVAudioPlayer(contentsOfURL:RecordViewController., error: &error)
-        
-        if let err = error{
-            
-            NSLog("sjkaldfhjakds")
-        }
-        else{
-            
-            blabPlayer!.delegate = self
-            blabPlayer!.prepareToPlay()
-            blabPlayer!.volume = 1.0
-        }
-        
-    }
+    
     
 }

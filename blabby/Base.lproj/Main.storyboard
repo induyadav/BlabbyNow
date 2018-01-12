@@ -178,9 +178,6 @@
                                 <state key="normal" title="Blab!">
                                     <color key="titleColor" red="1" green="1" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="blabRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ih3-vk-BQ2"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxe-se-5s8">
                                 <rect key="frame" x="36" y="38" width="24" height="23"/>
@@ -225,7 +222,6 @@
                     <connections>
                         <outlet property="blabPressed" destination="k51-jT-Oua" id="PER-om-v4x"/>
                         <outlet property="cancelRecording" destination="lxe-se-5s8" id="pgH-IP-x6b"/>
-                        <outlet property="recordButton" destination="k51-jT-Oua" id="RJ8-iI-W4c"/>
                         <outlet property="sendRecording" destination="ZSX-h2-NSk" id="KJO-65-fZQ"/>
                         <outlet property="timerDigit" destination="XEm-XV-Fry" id="58V-Bm-RiC"/>
                     </connections>
