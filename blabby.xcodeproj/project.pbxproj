@@ -25,7 +25,6 @@
 		FFAF1A521EE9BC8E00AB1512 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF1A511EE9BC8E00AB1512 /* RecordViewController.swift */; };
 		FFAF1A551EE9BC8E00AB1512 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFAF1A531EE9BC8E00AB1512 /* Main.storyboard */; };
 		FFAF1A5A1EE9BC8E00AB1512 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFAF1A591EE9BC8E00AB1512 /* Assets.xcassets */; };
-		FFCAE3041F02A185001B7F25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFCAE3031F02A185001B7F25 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +73,6 @@
 		FFAF1A5E1EE9BC8E00AB1512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFAF1A631EE9BC8E00AB1512 /* blabbyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blabbyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFAF1A6E1EE9BC8E00AB1512 /* blabbyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blabbyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FFCAE3031F02A185001B7F25 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FFCAE3051F037E01001B7F25 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FFCAE3071F037E13001B7F25 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -115,7 +113,6 @@
 			children = (
 				FB73B1521F9DF97500C1B8EA /* LaunchScreenViewController.xib */,
 				04AC4A871EF6C6160055168C /* blabby.entitlements */,
-				FFCAE3031F02A185001B7F25 /* GoogleService-Info.plist */,
 				FFAF1A591EE9BC8E00AB1512 /* Assets.xcassets */,
 				FB73B14F1F9DB11600C1B8EA /* GoogleService-Info.plist */,
 				FFAF1A5E1EE9BC8E00AB1512 /* Info.plist */,
@@ -326,7 +323,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C56DC72B200572C5003FE773 /* Launch Screen.storyboard in Resources */,
-				FFCAE3041F02A185001B7F25 /* GoogleService-Info.plist in Resources */,
 				FB73B1501F9DB11600C1B8EA /* GoogleService-Info.plist in Resources */,
 				FFAF1A5A1EE9BC8E00AB1512 /* Assets.xcassets in Resources */,
 				FFAF1A551EE9BC8E00AB1512 /* Main.storyboard in Resources */,
