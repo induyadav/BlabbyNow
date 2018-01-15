@@ -57,7 +57,7 @@ class RecordViewController: UIViewController
      
       
             let blabAccountByUID=Auth.auth().currentUser?.uid
-            Database.database().reference().child("Users").child(blabReceived!).observe(.childAdded, with: { (snapshot) in
+            Database.database().reference().child("Users").child(blabAccountByUID!).observe(.childAdded, with: { (snapshot) in
             
             if let snapshotSaved = snapshot.value as? [String: AnyObject] {
             
