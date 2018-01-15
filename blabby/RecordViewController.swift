@@ -31,20 +31,21 @@ class RecordViewController: UIViewController
     
     
     
-    @IBOutlet var blabPressed: UIButton!
-    @IBOutlet weak var cancelRecording: UIButton!
-    @IBOutlet weak var sendRecording: UIButton!
-    @IBOutlet weak var timerDigit: UILabel!
+    @IBOutlet var bRecordButton: UIButton!
+    @IBOutlet weak var bCancelButton: UIButton!
+    @IBOutlet weak var bSendButton: UIButton!
+    @IBOutlet weak var bTimerLabel: UILabel!
     
     
     //////fuction to make blabrPressed Circular/////
     func blabPressedCircularStroke()
     {
-        self.blabPressed.backgroundColor = .clear
-        self.blabPressed.layer.cornerRadius = 37
-        self.blabPressed.layer.borderWidth = 2
+        self.bRecordButton.backgroundColor = .clear
+        self.bRecordButton.layer.cornerRadius = 37
+        self.bRecordButton.layer.borderWidth = 4
         
-        self.blabPressed.layer.borderColor = UIColor(red: 244, green: 178, blue: 70, alpha: 1).cgColor
+        self.bRecordButton.layer.borderColor = CGColor(colorLiteralRed: 244, green: 178, blue: 70, alpha: 1)
+        
     }
     
     override func viewDidLoad()
@@ -95,15 +96,6 @@ class RecordViewController: UIViewController
         }, withCancel: nil)
         
     }
-    
-    
-    
-    
-  
-    
-    
-    
-    
     
     
 
