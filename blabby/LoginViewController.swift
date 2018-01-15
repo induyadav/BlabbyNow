@@ -14,29 +14,15 @@ import FirebaseDatabase
 
 class LoginViewController: UIViewController{
    //object of data model cladd my info
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
 
  
     }
     
-    func registerUser() {
-      
-        guard let name = Username.text,let number = Mobileno.text
-            else { print("form not valid")
-                return}
-        let values = ["name" : name, "number" : number]
-        let ref = Database.database().reference(fromURL: "https://blabby-126d8.firebaseio.com/" )
-        let usersReference = ref.child("Users").child(name)
-        usersReference.updateChildValues(values) { (err, ref) in
-            if (err != nil) {
-                print(String(describing: LocalizedError.self))
-                return
-            }
-            print("user registered successfully into firbase db")
-        }
-    }
+    
     
     @IBOutlet weak var UsernameLabel: UILabel!
     @IBOutlet weak var MobilenoLabel: UILabel!
@@ -99,15 +85,39 @@ class LoginViewController: UIViewController{
             }
         }
     
-
-    override var preferredStatusBarStyle: UIStatusBarStyle{
-        return .lightContent
-    }
-}
-   
     
+    func registerUser() {
+        
+        guard let name = Username.text,let number = Mobileno.text
+            else
+        {
+            print("form not valid")
+            return
+                
+        }
 
+            let currentUserUid=Auth.auth().currentUser?.uid
+            let values = ["name" : name, "number" : number]
+            let ref = Database.database().reference(fromURL: "https://blabby-126d8.firebaseio.com/" )
+            let usersReference = ref.child("Users").child(currentUserUid!)
+            usersReference.updateChildValues(values) { (err, ref) in
+                if (err != nil) {
+                    print(String(describing: LocalizedError.self))
+                    return
+                }
+                print("user registered successfully into firbase db")
+            }
+        }
     
+//COLOR OF STATUS BAR
+            override var preferredStatusBarStyle: UIStatusBarStyle{
+                return .lightContent
+            }
+        }
+
+
+
+
 
     
     
