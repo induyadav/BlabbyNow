@@ -220,6 +220,7 @@
                     <navigationItem key="navigationItem" id="hTM-eE-vBl"/>
                     <connections>
                         <outlet property="bCancelButton" destination="lxe-se-5s8" id="5fX-tU-wmG"/>
+                        <outlet property="bControlView" destination="efW-uM-BA4" id="OB3-q9-Dzo"/>
                         <outlet property="bRecordButton" destination="k51-jT-Oua" id="fvC-NW-aSK"/>
                         <outlet property="bSendButton" destination="ZSX-h2-NSk" id="tmp-jS-6G4"/>
                         <outlet property="bTimerLabel" destination="XEm-XV-Fry" id="elh-9T-Y9b"/>

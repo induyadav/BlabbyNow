@@ -23,7 +23,6 @@ class LoginViewController: UIViewController{
     }
     
     
-    
     @IBOutlet weak var UsernameLabel: UILabel!
     @IBOutlet weak var MobilenoLabel: UILabel!
     @IBOutlet weak var CodeLabel: UILabel!
@@ -113,7 +112,14 @@ class LoginViewController: UIViewController{
             override var preferredStatusBarStyle: UIStatusBarStyle{
                 return .lightContent
             }
+    
+            
+    
+    
+    
+    
         }
+
 
 
 

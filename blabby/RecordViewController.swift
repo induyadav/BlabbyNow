@@ -11,10 +11,12 @@ import AVFoundation
 import Firebase
 import FirebaseDatabase
 
-
+var initialState:Bool=false
 
 class RecordViewController: UIViewController
 {
+   
+    
     //the colour of the status bar
     var audioRecorder:AVAudioRecorder?
     var users = [User]()
@@ -30,11 +32,13 @@ class RecordViewController: UIViewController
 
     
     
+    @IBOutlet weak var bControlView: UIView!
     
     @IBOutlet var bRecordButton: UIButton!
     @IBOutlet weak var bCancelButton: UIButton!
     @IBOutlet weak var bSendButton: UIButton!
     @IBOutlet weak var bTimerLabel: UILabel!
+    
     
     
     //////fuction to make blabPressed Circular/////
@@ -50,6 +54,7 @@ class RecordViewController: UIViewController
     //VIEW DID LOAD
     override func viewDidLoad()
     {
+        self.bControlView.isHidden = initialState
         self.blabPressedCircularStroke()
         super.viewDidLoad()
         
@@ -91,7 +96,7 @@ class RecordViewController: UIViewController
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
     }
-
+    
     
     
     
