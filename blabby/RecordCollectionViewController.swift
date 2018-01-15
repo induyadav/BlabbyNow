@@ -12,6 +12,7 @@ import UIKit
 let reuseIdentifier = "Collection Cell"
 var names = ["asdfg","asdfg","asdfg","asdfg"]
 var images:[UIImage]=[#imageLiteral(resourceName: "profile 1"),#imageLiteral(resourceName: "profile 2"),#imageLiteral(resourceName: "profile 3"),#imageLiteral(resourceName: "profile 4"),#imageLiteral(resourceName: "profile 5")]
+var onear:UIImage=#imageLiteral(resourceName: "onear.JPG")
 var users = [User]()
 
 
@@ -89,7 +90,27 @@ class RecordCollectionViewController: UICollectionViewController
         print("clicked")
         
     }
+    override public func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath){
+        print("highlighted")
+        print(indexPath.row)
+        
+        let cell=self.collectionView?.cellForItem(at: indexPath)
+        cell?.layer.borderWidth=2
+        
+        cell?.layer.borderColor=UIColor(displayP3Red: 244.0/255.0, green: 178.0/255.0, blue: 70.0/255.0, alpha: 1.0).cgColor
+        
+        
+        
+        
+//        let cell = collectionView.cellForItem(at: indexPath)
+//        if let tcell=cell as! RecordCollectionViewCell!
+//        {
+//            tcell.roundedImage.image=#imageLiteral(resourceName: "image1")
+//        }
+//
     
+        
+    }
     
     
 }
