@@ -52,21 +52,13 @@ class RecordViewController: UIViewController
         
     }
     //VIEW DID LOAD
-    override func viewDidLoad()
-    {
-        self.bControlView.isHidden = initialState
-        self.blabPressedCircularStroke()
-        super.viewDidLoad()
-        
-        
-     
-      
-            let blabAccountByUID=Auth.auth().currentUser?.uid
-            Database.database().reference().child("Users").child(blabAccountByUID!).observe(.childAdded, with: { (snapshot) in
+    fileprivate func fetchBlab() {
+        let blabAccountByUID=Auth.auth().currentUser?.uid
+        Database.database().reference().child("Users").child(blabAccountByUID!).observe(.childAdded, with: { (snapshot) in
             
             if let snapshotSaved = snapshot.value as? [String: AnyObject] {
-            
-            //model being initialised
+                
+                //model being initialised
                 let user = User(dictionary: snapshotSaved)
                 user.name = snapshotSaved["name"] as? String
                 user.number = snapshotSaved["number"] as? String
@@ -80,16 +72,29 @@ class RecordViewController: UIViewController
                 
                 //this will crash because of background thread, so lets use dispatch_async to fix
                 
-//                DispatchQueue.main.async(execute: {
-//                RecordCollectionViewController.RecordCollectionView.reloadData()
-//
+                //                DispatchQueue.main.async(execute: {
+                //                RecordCollectionViewController.RecordCollectionView.reloadData()
+                //
                 
-//                })
-//                
+                //                })
+                //
                 
             }
             
         }, withCancel: nil)
+    }
+    
+    override func viewDidLoad()
+    {
+        self.bControlView.isHidden = initialState
+        self.blabPressedCircularStroke()
+        super.viewDidLoad()
+        fetchBlab()
+        
+        
+     
+      
+
         
     }
     

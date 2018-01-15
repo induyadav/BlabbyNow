@@ -90,6 +90,7 @@ class RecordCollectionViewController: UICollectionViewController
                 //func call for didSelect = play on select
             if initialState==true{
                 print(" play on select")
+                print(indexPath)
                 let cell = collectionView.cellForItem(at: indexPath)
                 if let tcell=cell as! RecordCollectionViewCell!
                 {
