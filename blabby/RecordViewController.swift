@@ -44,7 +44,7 @@ class RecordViewController: UIViewController
         self.bRecordButton.layer.cornerRadius = 37
         self.bRecordButton.layer.borderWidth = 4
         
-        self.bRecordButton.layer.borderColor = CGColor(colorLiteralRed: 244, green: 178, blue: 70, alpha: 1)
+        self.bRecordButton.layer.borderColor = UIColor(displayP3Red: 244.0/255.0, green: 178.0/255.0, blue: 70.0/255.0, alpha: 1.0).cgColor
         
     }
     
@@ -97,6 +97,8 @@ class RecordViewController: UIViewController
         
     }
     
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
 
 }
