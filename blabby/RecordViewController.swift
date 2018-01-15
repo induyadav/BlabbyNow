@@ -32,27 +32,32 @@ class RecordViewController: UIViewController
     
     
     @IBOutlet var blabPressed: UIButton!
-    @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var cancelRecording: UIButton!
     @IBOutlet weak var sendRecording: UIButton!
     @IBOutlet weak var timerDigit: UILabel!
     
     
-    
-    
+    //////fuction to make blabrPressed Circular/////
+    func blabPressedCircularStroke()
+    {
+        self.blabPressed.backgroundColor = .clear
+        self.blabPressed.layer.cornerRadius = 37
+        self.blabPressed.layer.borderWidth = 2
+        
+        self.blabPressed.layer.borderColor = UIColor(red: 244, green: 178, blue: 70, alpha: 1).cgColor
+    }
     
     override func viewDidLoad()
     {
-        
-        
-            super.viewDidLoad()
+        self.blabPressedCircularStroke()
+        super.viewDidLoad()
         
             let uid = Auth.auth().currentUser?.uid
             Database.database().reference().child("Users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
-           print("uid is  \(uid!)")
+            print("uid is  \(uid!)")
 
             print(snapshot)
-        if (snapshot.value as? [String: AnyObject]) != nil{
+            if (snapshot.value as? [String: AnyObject]) != nil{
             print(" this is the user id snapshot \(snapshot.self)")
 
         }

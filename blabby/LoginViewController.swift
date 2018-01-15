@@ -76,24 +76,25 @@ class LoginViewController: UIViewController{
     }
     
     
-    @IBAction func signup(_ sender: Any) {
+    @IBAction func signup(_ sender: Any)
+    {
         
      let defaults = UserDefaults.standard
         let credential : PhoneAuthCredential = PhoneAuthProvider.provider().credential(withVerificationID : defaults.string(forKey: "authVID")!, verificationCode: code.text! )
-        Auth.auth().signIn(with: credential){(user,error) in
-            if error != nil{
+        Auth.auth().signIn(with: credential)
+        {
+            (user,error) in
+            if error != nil
+            {
                 print((String(describing:error?.localizedDescription)))
-            } else{
+            }
+            else
+            {
                 print("Phone no: \(String(describing: user?.phoneNumber))")
               
                 
                     self.performSegue(withIdentifier: "code", sender: self)
                     self.registerUser()
-                
-                
-                
-                
-                    
                 }
             }
         }
