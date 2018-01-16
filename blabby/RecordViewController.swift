@@ -11,7 +11,7 @@ import AVFoundation
 import Firebase
 import FirebaseDatabase
 
-var initialState:Bool=false
+var initialState:Bool=true
 
 class RecordViewController: UIViewController
 {
@@ -58,7 +58,6 @@ class RecordViewController: UIViewController
         self.blabPressedCircularStroke()
         super.viewDidLoad()
         
-        
      
       
             let blabAccountByUID=Auth.auth().currentUser?.uid
@@ -97,7 +96,7 @@ class RecordViewController: UIViewController
         return .lightContent
     }
     
-    
+   
     
     
 }
