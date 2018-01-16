@@ -79,13 +79,13 @@ class LoginViewController: UIViewController{
               
                 
                     self.performSegue(withIdentifier: "code", sender: self)
-                    self.registerUser()
+                    self.registerUserInFirebase()
                 }
             }
         }
     
     
-    func registerUser() {
+    func registerUserInFirebase() {
         
         guard let name = Username.text,let number = Mobileno.text
             else
@@ -96,9 +96,9 @@ class LoginViewController: UIViewController{
         }
 
             let currentUserUid=Auth.auth().currentUser?.uid
-            let values = ["name" : name, "number" : number]
+            let values = ["name" : name, "number" : number,"UID":currentUserUid]
             let ref = Database.database().reference(fromURL: "https://blabby-126d8.firebaseio.com/" )
-            let usersReference = ref.child("Users").child(currentUserUid!)
+            let usersReference = ref.child("Users").child(currentUserUid!).child("UserData")
             usersReference.updateChildValues(values) { (err, ref) in
                 if (err != nil) {
                     print(String(describing: LocalizedError.self))

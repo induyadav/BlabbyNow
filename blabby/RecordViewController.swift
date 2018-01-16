@@ -11,7 +11,7 @@ import AVFoundation
 import Firebase
 import FirebaseDatabase
 
-var initialState:Bool=false
+var initialState:Bool=true
 
 class RecordViewController: UIViewController
 {
@@ -65,7 +65,7 @@ class RecordViewController: UIViewController
                 print("fetch user accessed")
                 print(snapshotSaved)
                 
-                user.id = snapshot.key
+                user.UID = snapshot.key
                 self.users.append(user)
                 print(user.name!, user.number!)
                 

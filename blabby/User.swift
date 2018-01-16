@@ -9,16 +9,16 @@
 import UIKit
 
 class User: NSObject {
-    var id: String?
+    var UID: String?
     var name: String?
     var number: String?
-     var profileImageUrl = #imageLiteral(resourceName: "Image")
+    var bDownloadURL: String?
    
     init(dictionary: [String: AnyObject]) {
-        self.id = dictionary["id"] as? String ?? ""
+        self.UID = dictionary["id"] as? String ?? ""
         self.name = dictionary["name"] as? String ?? ""
         self.number = dictionary["number"] as? String ?? ""
-       
+        self.bDownloadURL = dictionary["URL"] as? String
     }
 }
 
