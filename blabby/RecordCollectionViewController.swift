@@ -86,7 +86,7 @@ class RecordCollectionViewController: UICollectionViewController
     
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
-           {
+    {   
                 //func call for didSelect = play on select
             if initialState==true{
                 print(" play on select")
@@ -97,19 +97,23 @@ class RecordCollectionViewController: UICollectionViewController
                   
                 }
                 
-            }
+        }
                 //func call for didHighlight = select for send
             if initialState==false
                 {
-                    print(" select for send")
-                let cell = collectionView.cellForItem(at: indexPath)
-                if let tcell=cell as! RecordCollectionViewCell!
-                    {
-                    tcell.roundedImage.image=#imageLiteral(resourceName: "image1")
-                    }
+                        print(" select for send")
+                    let cell = collectionView.cellForItem(at: indexPath)
+                    if let tcell=cell as! RecordCollectionViewCell!
+                    
+                        {
+                          tcell.roundedImage.image=#imageLiteral(resourceName: "selectToSend")
+                        }
+                }
+                    
+                
                 }
             
-            }
+    
     
         
         
