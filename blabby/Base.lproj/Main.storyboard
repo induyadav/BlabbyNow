@@ -219,14 +219,6 @@
                                     <segue destination="KYo-Gk-LrY" kind="embed" id="bWU-i2-pUU"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sL7-tG-2l5">
-                                <rect key="frame" x="31" y="453" width="69" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="stop"/>
-                                <connections>
-                                    <action selector="testStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xKM-Bd-e3q"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
