@@ -9,55 +9,83 @@
 import Foundation
 import AVFoundation
 
-class Record{
-    init() {
-        print("init")
-    }
+class Record:AVAudioRecorder, AVAudioRecorderDelegate{
     
-    var soundFileURL:URL?=nil
-    //var declaration
-    var audioRecorder:AVAudioRecorder?
-    
-    //file directory making
-    func directoryMaking()->URL
-    {
-    let fileMgr = FileManager.default
-    
-    let dirPaths = fileMgr.urls(for: .documentDirectory,
-                                in: .userDomainMask)
-    let soundFileURL = dirPaths[0].appendingPathComponent("sound.caf")
+    var soundRecorder : AVAudioRecorder!
+    var fileName = "audioFile.m4a"
+    var soundSession:AVAudioSession
+    override init() {
         
-        return soundFileURL
+        soundSession=AVAudioSession.sharedInstance()
+        do
+        {
+        try soundSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
+        try soundSession.setActive(true)
+        }catch
+        {
+            let e=NSError()
+            print("error loading session \(e.localizedDescription)")
+            
+        }
+        super.init()
     }
-    
-       
-    
-    // Audio settings
-   var recordSettings =
-        [AVEncoderAudioQualityKey: AVAudioQuality.min.rawValue,
-         AVEncoderBitRateKey: 16,
-         AVNumberOfChannelsKey: 2,
-         AVSampleRateKey: 44100.0] as [String : Any]
 
-//    do {
-//          try  audioRecorder = AV
-//    }
-//    
-//
-    /*func startRecording(press:UILongPressGestureRecognizer){
+
+
+
+    func getCacheDirectory() -> String {
         
+        let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true) as! [String]
         
-        if press.state == .began{
-            recorder.record(forDuration: 8)
-            
-            
-        }
-        else if press.state == .ended{
-            recorder.pause()
-            
-        }
+        return paths[0]
         
     }
-*/
     
+    func getFileURL() -> URL{
+        let path  = getCacheDirectory()+fileName
+        
+        let filePath = URL(fileURLWithPath: path)
+        
+        return filePath
+    }
+    
+    
+    func setupRecorder()
+    {
+        
+        
+
+            var recordSettings = [AVFormatIDKey : kAudioFormatAppleLossless,
+                                  AVEncoderAudioQualityKey : AVAudioQuality.max.rawValue,
+                                  AVEncoderBitRateKey : 320000,
+                                  AVNumberOfChannelsKey : 2,
+                                  AVSampleRateKey : 44100.0 ] as [String: Any]
+        
+        
+            do
+            {
+                soundRecorder = try AVAudioRecorder(url: getFileURL(), settings: recordSettings )
+                soundRecorder.delegate = self
+                soundRecorder.prepareToRecord()
+            }
+            catch
+            {
+                let e=NSError()
+                
+                
+                    
+                    NSLog("Something Wrong")
+                    print(e.localizedDescription)
+                
+                
+                
+                
+        }
+        
+            
+    }
+
+
+
 }
+

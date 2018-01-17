@@ -17,17 +17,8 @@ class RecordViewController: UIViewController
 {
    
     
-    //the colour of the status bar
-    var audioRecorder:AVAudioRecorder?
+    lazy var recordObj = Record()
     var users = [User]()
-    var blabRecorder:AVAudioRecorder?
-//    public var file:NSURL{
-//        get{
-//            return getFileURL()
-//        }
-//    }
-//    
-    //Identifier for cell
     
 
     
@@ -51,7 +42,7 @@ class RecordViewController: UIViewController
         self.bRecordButton.layer.borderColor = UIColor(displayP3Red: 244.0/255.0, green: 178.0/255.0, blue: 70.0/255.0, alpha: 1.0).cgColor
         
     }
-    //VIEW DID LOAD
+   
     fileprivate func fetchBlab() {
         let blabAccountByUID=Auth.auth().currentUser?.uid
         Database.database().reference().child("Users").child(blabAccountByUID!).observe(.childAdded, with: { (snapshot) in
@@ -83,13 +74,23 @@ class RecordViewController: UIViewController
             
         }, withCancel: nil)
     }
-    
+
+    //VIEW DID LOAD
     override func viewDidLoad()
     {
-        self.bControlView.isHidden = initialState
+        
         self.blabPressedCircularStroke()
+        
         super.viewDidLoad()
+        
+        
         fetchBlab()
+        recordObj.setupRecorder()
+        let longPress=UILongPressGestureRecognizer(target: self, action:#selector(bRecorderPressed(press:)))
+            longPress.minimumPressDuration=0
+            longPress.numberOfTouchesRequired=1
+        
+        bRecordButton.addGestureRecognizer(longPress)
         
         
      
@@ -97,12 +98,38 @@ class RecordViewController: UIViewController
 
         
     }
-    
+    //status bar light
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
     }
     
-   
+    //applied function on blab recorder
+    func bRecorderPressed(press:UILongPressGestureRecognizer)
+        {
+            
+            print("brecordbutton long pressed")
+            
+            switch press.state
+            {
+            case .possible:
+                print("in possible")
+                recordObj.setupRecorder()
+            case .began:
+               
+                print(" in began"); bRecordButton.isHighlighted=true
+                recordObj.soundRecorder.record()
+            case .ended:
+               
+                print(" in ended"); bRecordButton.isHighlighted=false
+                recordObj.soundRecorder.pause()
+            default:
+                print("long press gesture couldnt complete")
+            }
+            
+            
+            
+        }
+
+    }
     
-    
-}
+

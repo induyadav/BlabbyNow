@@ -13,7 +13,6 @@
 		9F5E7E66858F0BA4CA7ADA17 /* Pods_blabbyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F102E983E33D1FAA72F2E52 /* Pods_blabbyTests.framework */; };
 		C56DC72920036931003FE773 /* RecordCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56DC72820036931003FE773 /* RecordCollectionViewController.swift */; };
 		C56DC72B200572C5003FE773 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C56DC72A200572C5003FE773 /* Launch Screen.storyboard */; };
-		C5E189D5200D07D900CCAEDE /* onear.JPG in Resources */ = {isa = PBXBuildFile; fileRef = C5E189D4200D07D900CCAEDE /* onear.JPG */; };
 		FB0F984F1F9A13BB0097A7CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F984E1F9A13BB0097A7CB /* LoginViewController.swift */; };
 		FB56B2C71F7A494C0065739C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB56B2C51F7A487E0065739C /* CoreData.framework */; };
 		FB6372C01F1E9E030069F3A1 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6372BF1F1E9E030069F3A1 /* Record.swift */; };
@@ -59,7 +58,6 @@
 		C56DC72820036931003FE773 /* RecordCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCollectionViewController.swift; sourceTree = "<group>"; };
 		C56DC72A200572C5003FE773 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		C56DC72C20057341003FE773 /* yoyoblabAsset-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yoyoblabAsset-1.png"; sourceTree = "<group>"; };
-		C5E189D4200D07D900CCAEDE /* onear.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = onear.JPG; path = blabby/onear.JPG; sourceTree = "<group>"; };
 		C7A5B246E630B4668F50F952 /* Pods_blabby.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_blabby.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0F984E1F9A13BB0097A7CB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FB56B2C51F7A487E0065739C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -161,7 +159,6 @@
 		FFAF1A431EE9BC8E00AB1512 = {
 			isa = PBXGroup;
 			children = (
-				C5E189D4200D07D900CCAEDE /* onear.JPG */,
 				FFAF1A4E1EE9BC8E00AB1512 /* blabby */,
 				FFAF1A4D1EE9BC8E00AB1512 /* Products */,
 				04AC4A881EF6C6160055168C /* Frameworks */,
@@ -328,7 +325,6 @@
 				C56DC72B200572C5003FE773 /* Launch Screen.storyboard in Resources */,
 				FB73B1501F9DB11600C1B8EA /* GoogleService-Info.plist in Resources */,
 				FFAF1A5A1EE9BC8E00AB1512 /* Assets.xcassets in Resources */,
-				C5E189D5200D07D900CCAEDE /* onear.JPG in Resources */,
 				FFAF1A551EE9BC8E00AB1512 /* Main.storyboard in Resources */,
 				FB73B1541F9DF97500C1B8EA /* LaunchScreenViewController.xib in Resources */,
 			);
