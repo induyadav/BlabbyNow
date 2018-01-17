@@ -116,11 +116,15 @@ class RecordViewController: UIViewController
                 recordObj.setupRecorder()
             case .began:
                
-                print(" in began"); bRecordButton.isHighlighted=true
+                print(" in began");
+                bRecordButton.layer.borderColor = UIColor.blue.cgColor
+                bRecordButton.isHighlighted=true
                 recordObj.soundRecorder.record()
             case .ended:
                
-                print(" in ended"); bRecordButton.isHighlighted=false
+                print(" in ended");
+                bRecordButton.layer.borderColor = UIColor(displayP3Red: 244.0/255.0, green: 178.0/255.0, blue: 70.0/255.0, alpha: 1.0).cgColor
+                bRecordButton.isHighlighted=false
                 recordObj.soundRecorder.pause()
             default:
                 print("long press gesture couldnt complete")
