@@ -178,6 +178,9 @@
                                             <constraint firstAttribute="width" constant="34" id="UEj-lc-MRL"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="send"/>
+                                        <connections>
+                                            <action selector="bcontrolViewPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BP0-cl-JzF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxe-se-5s8" userLabel="bCancelButton">
                                         <rect key="frame" x="35" y="28" width="24" height="23"/>
@@ -186,6 +189,9 @@
                                             <constraint firstAttribute="height" constant="23" id="sHa-2Z-hsu"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="close"/>
+                                        <connections>
+                                            <action selector="bcontrolViewPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CiK-6D-eoq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

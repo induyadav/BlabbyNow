@@ -10,7 +10,6 @@ import UIKit
 import AVFoundation
 import Firebase
 import FirebaseDatabase
-
 var initialState:Bool=true
 
 class RecordViewController: UIViewController
@@ -30,6 +29,10 @@ class RecordViewController: UIViewController
     @IBOutlet weak var bSendButton: UIButton!
     @IBOutlet weak var bTimerLabel: UILabel!
     
+    @IBAction func bcontrolViewPressed(_ sender: Any) {
+        initialState=true
+        bControlViewToggle(state: initialState)
+    }
     
     
     //////fuction to make blabPressed Circular/////
@@ -46,8 +49,7 @@ class RecordViewController: UIViewController
     fileprivate func fetchBlab() {
         let blabAccountByUID=Auth.auth().currentUser?.uid
         Database.database().reference().child("Users").child(blabAccountByUID!).observe(.childAdded, with: { (snapshot) in
-            
-            if let snapshotSaved = snapshot.value as? [String: AnyObject] {
+                if let snapshotSaved = snapshot.value as? [String: AnyObject] {
                 
                 //model being initialised
                 let user = User(dictionary: snapshotSaved)
@@ -75,7 +77,17 @@ class RecordViewController: UIViewController
         }, withCancel: nil)
     }
 
-    //VIEW DID LOAD
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+      fetchBlab()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print(" in viewWillAppear")
+        bControlViewToggle(state:initialState)
+        
+    }
     override func viewDidLoad()
     {
         
@@ -84,11 +96,13 @@ class RecordViewController: UIViewController
         super.viewDidLoad()
         
         
-        fetchBlab()
+        
         recordObj.setupRecorder()
         let longPress=UILongPressGestureRecognizer(target: self, action:#selector(bRecorderPressed(press:)))
             longPress.minimumPressDuration=0
             longPress.numberOfTouchesRequired=1
+            longPress.allowableMovement=100
+        
         
         bRecordButton.addGestureRecognizer(longPress)
         
@@ -106,33 +120,32 @@ class RecordViewController: UIViewController
     //applied function on blab recorder
     func bRecorderPressed(press:UILongPressGestureRecognizer)
         {
-            
-            print("brecordbutton long pressed")
-            
-            switch press.state
+            if press.state == .began
             {
-            case .possible:
-                print("in possible")
-                recordObj.setupRecorder()
-            case .began:
-               
                 print(" in began");
                 bRecordButton.layer.borderColor = UIColor.blue.cgColor
                 bRecordButton.isHighlighted=true
                 recordObj.soundRecorder.record()
-            case .ended:
-               
+                initialState=false
+                bControlViewToggle(state: initialState)
+                
+                
+                
+            }
+            else if press.state == .ended
+            {
                 print(" in ended");
                 bRecordButton.layer.borderColor = UIColor(displayP3Red: 244.0/255.0, green: 178.0/255.0, blue: 70.0/255.0, alpha: 1.0).cgColor
                 bRecordButton.isHighlighted=false
                 recordObj.soundRecorder.pause()
-            default:
-                print("long press gesture couldnt complete")
             }
-            
-            
-            
+
         }
+    func bControlViewToggle(state:Bool) -> Void {
+        bControlView.isHidden=state
+        bControlView.setNeedsDisplay()
+        
+    }
 
     }
     

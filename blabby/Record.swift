@@ -12,7 +12,7 @@ import AVFoundation
 class Record:AVAudioRecorder, AVAudioRecorderDelegate{
     
     var soundRecorder : AVAudioRecorder!
-    var fileName = "audioFile.m4a"
+    var fileName = "/audioFile.m4a"
     var soundSession:AVAudioSession
     override init() {
         
@@ -34,7 +34,7 @@ class Record:AVAudioRecorder, AVAudioRecorderDelegate{
 
 
     func getCacheDirectory() -> String {
-        
+        print("inside getCacheDirectory()")
         let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true) as! [String]
         
         return paths[0]
@@ -42,6 +42,7 @@ class Record:AVAudioRecorder, AVAudioRecorderDelegate{
     }
     
     func getFileURL() -> URL{
+        print("inside getFileURL()")
         let path  = getCacheDirectory()+fileName
         
         let filePath = URL(fileURLWithPath: path)
@@ -66,8 +67,10 @@ class Record:AVAudioRecorder, AVAudioRecorderDelegate{
             {
                 soundRecorder = try AVAudioRecorder(url: getFileURL(), settings: recordSettings )
                 soundRecorder.delegate = self
+                print("file \(getFileURL())")
                 soundRecorder.prepareToRecord()
             }
+                
             catch
             {
                 let e=NSError()

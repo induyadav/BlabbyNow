@@ -12,7 +12,7 @@ import UIKit
 let reuseIdentifier = "Collection Cell"
 var names = ["asdfg","asdfg","asdfg","asdfg"]
 var images:[UIImage]=[#imageLiteral(resourceName: "profile 1"),#imageLiteral(resourceName: "profile 2"),#imageLiteral(resourceName: "profile 3"),#imageLiteral(resourceName: "profile 4"),#imageLiteral(resourceName: "profile 5")]
-var onear:UIImage=#imageLiteral(resourceName: "onear.JPG")
+var onEar:UIImage=#imageLiteral(resourceName: "onear.JPG")
 var users = [User]()
 
 
@@ -91,10 +91,13 @@ class RecordCollectionViewController: UICollectionViewController
             if initialState==true{
                 print(" play on select")
                 print(indexPath.row)
+                var temp=indexPath.row
                 let cell = collectionView.cellForItem(at: indexPath)
                 if let tcell=cell as! RecordCollectionViewCell!
                 {
-                  
+                        tcell.roundedImage.image=#imageLiteral(resourceName: "onEar")
+                        print("set top onEar 2")
+                    
                 }
                 
         }
@@ -111,8 +114,10 @@ class RecordCollectionViewController: UICollectionViewController
                 }
                     
                 
-                }
-            
+    }
+    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        print("deselected")
+    }
     
     
         
