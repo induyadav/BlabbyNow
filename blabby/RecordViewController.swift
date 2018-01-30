@@ -11,6 +11,7 @@ import AVFoundation
 import Firebase
 import FirebaseDatabase
 var initialState:Bool=true
+var blabRecordTime:Double?
 
 class RecordViewController: UIViewController
 {
@@ -24,6 +25,7 @@ class RecordViewController: UIViewController
     
     @IBOutlet weak var bControlView: UIView!
     
+    @IBOutlet weak var blabRecordTimeLabel: UILabel!
     @IBOutlet var bRecordButton: UIButton!
     @IBOutlet weak var bCancelButton: UIButton!
     @IBOutlet weak var bSendButton: UIButton!
@@ -92,6 +94,7 @@ class RecordViewController: UIViewController
     {
         
         self.blabPressedCircularStroke()
+//        recordObj.soundRecorder.prepareToRecord()
         
         super.viewDidLoad()
         
@@ -129,7 +132,7 @@ class RecordViewController: UIViewController
                 initialState=false
                 bControlViewToggle(state: initialState)
                 
-                
+             
                 
             }
             else if press.state == .ended
@@ -138,15 +141,22 @@ class RecordViewController: UIViewController
                 bRecordButton.layer.borderColor = UIColor(displayP3Red: 244.0/255.0, green: 178.0/255.0, blue: 70.0/255.0, alpha: 1.0).cgColor
                 bRecordButton.isHighlighted=false
                 recordObj.soundRecorder.pause()
+                blabRecordTime=recordObj.soundRecorder.currentTime
+                print("recording time is \(blabRecordTime)")
             }
 
         }
-    func bControlViewToggle(state:Bool) -> Void {
+    func bControlViewToggle(state:Bool) -> Void
+    {
         bControlView.isHidden=state
         bControlView.setNeedsDisplay()
         
     }
-
+//    func BlabRecordTimeIndicator()
+//    {
+//        <#function body#>
+//    }
+    
     }
     
 

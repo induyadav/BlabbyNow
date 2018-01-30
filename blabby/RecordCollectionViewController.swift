@@ -14,6 +14,8 @@ var names = ["asdfg","asdfg","asdfg","asdfg"]
 var images:[UIImage]=[#imageLiteral(resourceName: "profile 1"),#imageLiteral(resourceName: "profile 2"),#imageLiteral(resourceName: "profile 3"),#imageLiteral(resourceName: "profile 4"),#imageLiteral(resourceName: "profile 5")]
 var onEar:UIImage=#imageLiteral(resourceName: "onear.JPG")
 var users = [User]()
+var flag:Bool=false
+var temp:Int?
 
 
 class RecordCollectionViewController: UICollectionViewController
@@ -24,7 +26,6 @@ class RecordCollectionViewController: UICollectionViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         print(" collection view connected")
     
     }
@@ -86,20 +87,41 @@ class RecordCollectionViewController: UICollectionViewController
     
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
-    {   
+    {
+        
                 //func call for didSelect = play on select
-            if initialState==true{
+            if initialState==true
+        {
                 print(" play on select")
                 print(indexPath.row)
-                var temp=indexPath.row
-                let cell = collectionView.cellForItem(at: indexPath)
-                if let tcell=cell as! RecordCollectionViewCell!
+            
+                print(flag)
+            let cell = collectionView.cellForItem(at: indexPath)
+            if let tcell=cell as! RecordCollectionViewCell!
+            {
+                if flag==false
                 {
-                        tcell.roundedImage.image=#imageLiteral(resourceName: "onEar")
-                        print("set top onEar 2")
+                    tcell.roundedImage.image=#imageLiteral(resourceName: "onEar")
+                    print("set top onEar 2")
+                    flag=true
+                    temp=indexPath.row
+                    
                     
                 }
-                
+                else if temp==indexPath.row
+                    {
+                        print("blab paused")
+                        tcell.roundedImage.image=images[indexPath.row]
+                        flag=false
+                        
+                    }
+                    else
+                    {
+                        tcell.roundedImage.image=#imageLiteral(resourceName: "onEar")
+                        flag=false
+                        temp=indexPath.row
+                    }
+            }
         }
                 //func call for didHighlight = select for send
             if initialState==false
@@ -115,14 +137,26 @@ class RecordCollectionViewController: UICollectionViewController
                     
                 
     }
-    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        print("deselected")
-    }
-    
-    
-        
-        
-    }
-    
-    
+    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath)
+    {
+        if initialState==true
+        {
+            let cell=collectionView.cellForItem(at: indexPath )
+            
+            print("this is  deselected\(indexPath.row)")
+            if let tcell=cell as! RecordCollectionViewCell!
+            {
 
+                tcell.roundedImage.image=images[indexPath.row]
+          
+            }
+        }
+        else{
+           return
+        }
+        
+        
+    }
+    
+    
+}

@@ -248,6 +248,7 @@
                         <outlet property="bRecordButton" destination="k51-jT-Oua" id="fvC-NW-aSK"/>
                         <outlet property="bSendButton" destination="ZSX-h2-NSk" id="tmp-jS-6G4"/>
                         <outlet property="bTimerLabel" destination="XEm-XV-Fry" id="elh-9T-Y9b"/>
+                        <outlet property="blabRecordTimeLabel" destination="XEm-XV-Fry" id="bpQ-Lx-dpI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
