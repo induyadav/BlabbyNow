@@ -30,6 +30,7 @@ class RecordViewController: UIViewController
     @IBOutlet weak var bCancelButton: UIButton!
     @IBOutlet weak var bSendButton: UIButton!
     @IBOutlet weak var bTimerLabel: UILabel!
+    @IBOutlet weak var bRecordProgressBar: UIProgressView!
     
     @IBAction func bcontrolViewPressed(_ sender: Any) {
         initialState=true
@@ -46,17 +47,19 @@ class RecordViewController: UIViewController
         
     }
     
-    
+    weak var shapeLayer: CAShapeLayer?
     //////fuction to make blabPressed Circular/////
     func blabPressedCircularStroke()
     {
         self.bRecordButton.backgroundColor = .clear
         self.bRecordButton.layer.cornerRadius = 37
         self.bRecordButton.layer.borderWidth = 4
-        
+
         self.bRecordButton.layer.borderColor = UIColor(displayP3Red: 244.0/255.0, green: 178.0/255.0, blue: 70.0/255.0, alpha: 1.0).cgColor
-        
+        print("this fucntion calll or ashu changed")
     }
+    
+  
    
     fileprivate func fetchBlab() {
         let blabAccountByUID=Auth.auth().currentUser?.uid
@@ -102,7 +105,7 @@ class RecordViewController: UIViewController
     }
     override func viewDidLoad()
     {
-        
+       
         self.blabPressedCircularStroke()
 //        recordObj.soundRecorder.prepareToRecord()
         
@@ -141,9 +144,7 @@ class RecordViewController: UIViewController
                 recordObj.soundRecorder.record()
                 initialState=false
                 bControlViewToggle(state: initialState)
-                
-             
-                
+                bRecordProgressBar.progress = Float(recordObj.soundRecorder.currentTime)
             }
             else if press.state == .ended
             {
@@ -152,7 +153,8 @@ class RecordViewController: UIViewController
                 bRecordButton.isHighlighted=false
                 recordObj.soundRecorder.pause()
                 blabRecordTime=recordObj.soundRecorder.currentTime
-                print("recording time is \(blabRecordTime)")
+                print("recording time is \(String(describing: blabRecordTime))")
+               
             }
 
         }

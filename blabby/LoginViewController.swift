@@ -87,7 +87,7 @@ class LoginViewController: UIViewController{
     
     func registerUserInFirebase() {
         
-        guard let name = Username.text,let number = Mobileno.text
+        guard let name = Username.text, let number = (Mobileno.text)
             else
         {
             print("form not valid")
