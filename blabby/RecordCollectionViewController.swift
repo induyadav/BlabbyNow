@@ -69,22 +69,6 @@ class RecordCollectionViewController: UICollectionViewController
         return cell
     }
 
-//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
-//    {
-//
-//
-//        print("clicked")
-//
-//    }
-   
-    
-    
-   
-    
-    
-    
-         
-    
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
