@@ -30,7 +30,6 @@ class RecordViewController: UIViewController
     @IBOutlet weak var bCancelButton: UIButton!
     @IBOutlet weak var bSendButton: UIButton!
     @IBOutlet weak var bTimerLabel: UILabel!
-    @IBOutlet weak var bRecordProgressBar: UIProgressView!
     
     @IBAction func bcontrolViewPressed(_ sender: Any) {
         initialState=true
@@ -144,7 +143,7 @@ class RecordViewController: UIViewController
                 recordObj.soundRecorder.record()
                 initialState=false
                 bControlViewToggle(state: initialState)
-                bRecordProgressBar.progress = Float(recordObj.soundRecorder.currentTime)
+               
             }
             else if press.state == .ended
             {
