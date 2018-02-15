@@ -36,7 +36,7 @@ class Record:AVAudioRecorder, AVAudioRecorderDelegate{
     func getCacheDirectory() -> String {
         print("inside getCacheDirectory()")
         let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true) as! [String]
-        
+        print("this is the from the path array"+paths[0])
         return paths[0]
         
     }
@@ -56,7 +56,7 @@ class Record:AVAudioRecorder, AVAudioRecorderDelegate{
         
         
 
-            var recordSettings = [AVFormatIDKey : kAudioFormatAppleLossless,
+            let recordSettings = [AVFormatIDKey : kAudioFormatAppleLossless,
                                   AVEncoderAudioQualityKey : AVAudioQuality.max.rawValue,
                                   AVEncoderBitRateKey : 320000,
                                   AVNumberOfChannelsKey : 2,

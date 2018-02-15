@@ -35,6 +35,16 @@ class RecordViewController: UIViewController
         initialState=true
         bControlViewToggle(state: initialState)
     }
+   
+    @IBAction func bSendButtonPressed(_ sender: Any) {
+        
+        
+       
+         try recordObj.soundRecorder.stop()
+        print(" stopped successfully")
+        
+        
+    }
     
     
     //////fuction to make blabPressed Circular/////
@@ -152,11 +162,7 @@ class RecordViewController: UIViewController
         bControlView.setNeedsDisplay()
         
     }
-//    func BlabRecordTimeIndicator()
-//    {
-//        <#function body#>
-//    }
-    
+
     }
     
 
