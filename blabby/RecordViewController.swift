@@ -22,9 +22,9 @@ class RecordViewController: UIViewController
     
 
     
-    
+    var timer = Timer()
     @IBOutlet weak var bControlView: UIView!
-    
+    @IBOutlet var bProgressBar: UIProgressView!
     @IBOutlet weak var blabRecordTimeLabel: UILabel!
     @IBOutlet var bRecordButton: UIButton!
     @IBOutlet weak var bCancelButton: UIButton!
@@ -32,17 +32,22 @@ class RecordViewController: UIViewController
     @IBOutlet weak var bTimerLabel: UILabel!
     
    
-   
-    @IBAction func bSendButtonPressed(_ sender: Any) {
-        
-        
-       
-         try recordObj.soundRecorder.stop()
+    @IBAction func bCancelButtonPressed(_ sender: Any) {
+        try recordObj.soundRecorder.stop()
         print(" stopped successfully")
         initialState=true
         bControlViewToggle(state: initialState)
-        
+        self.bProgressBar.progress = 0
     }
+    
+    @IBAction func bSendButtonPressed(_ sender: Any) {
+        try recordObj.soundRecorder.stop()
+        print(" stopped successfully")
+        initialState=true
+        bControlViewToggle(state: initialState)
+        self.bProgressBar.progress = 0
+    }
+    
     
     weak var shapeLayer: CAShapeLayer?
     //////fuction to make blabPressed Circular/////
@@ -141,6 +146,7 @@ class RecordViewController: UIViewController
                 recordObj.soundRecorder.record()
                 initialState=false
                 bControlViewToggle(state: initialState)
+                timer = Timer.scheduledTimer(timeInterval: 0.002, target: self, selector: #selector(bUpdateProgressBar), userInfo: nil, repeats: true)
                
             }
             else if press.state == .ended
@@ -162,6 +168,12 @@ class RecordViewController: UIViewController
         
     }
 
+    
+    func bUpdateProgressBar()
+    {
+     var timeLeft = Float(self.recordObj.soundRecorder.currentTime)
+        self.bProgressBar.progress = timeLeft*0.12
+    }
     }
     
 

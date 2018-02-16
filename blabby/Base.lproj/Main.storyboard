@@ -190,7 +190,7 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="close"/>
                                         <connections>
-                                            <action selector="bcontrolViewPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CiK-6D-eoq"/>
+                                            <action selector="bCancelButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ucg-lg-WGV"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -225,19 +225,26 @@
                                     <segue destination="KYo-Gk-LrY" kind="embed" id="bWU-i2-pUU"/>
                                 </connections>
                             </containerView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bx5-du-WbL">
+                                <rect key="frame" x="16" y="342" width="288" height="2"/>
+                                <color key="progressTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="k51-jT-Oua" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="123" id="6aL-SL-5hE"/>
+                            <constraint firstItem="Bx5-du-WbL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7ye-h0-8p0"/>
                             <constraint firstItem="Q2m-NB-Pdh" firstAttribute="trailing" secondItem="efW-uM-BA4" secondAttribute="trailing" id="83f-8R-of8"/>
                             <constraint firstAttribute="trailing" secondItem="k51-jT-Oua" secondAttribute="trailing" constant="122" id="92d-Kr-Ifg"/>
                             <constraint firstAttribute="bottom" secondItem="Q2m-NB-Pdh" secondAttribute="bottom" constant="332" id="AZT-qB-rNl"/>
+                            <constraint firstItem="Bx5-du-WbL" firstAttribute="centerX" secondItem="XEm-XV-Fry" secondAttribute="centerX" id="DV2-m0-2nm"/>
                             <constraint firstItem="efW-uM-BA4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-6" id="Nfo-Ct-r43"/>
                             <constraint firstItem="k51-jT-Oua" firstAttribute="top" secondItem="XEm-XV-Fry" secondAttribute="bottom" constant="34" id="e9Y-Y7-hX0"/>
                             <constraint firstItem="Q2m-NB-Pdh" firstAttribute="centerX" secondItem="k51-jT-Oua" secondAttribute="centerX" id="f5j-37-rZA"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k51-jT-Oua" secondAttribute="bottom" constant="50" id="jHC-3g-Zem"/>
                             <constraint firstItem="Q2m-NB-Pdh" firstAttribute="centerX" secondItem="XEm-XV-Fry" secondAttribute="centerX" id="nnx-Rr-oNH"/>
                             <constraint firstItem="Q2m-NB-Pdh" firstAttribute="top" secondItem="efW-uM-BA4" secondAttribute="bottom" constant="24" id="v3F-LW-Ynf"/>
+                            <constraint firstItem="XEm-XV-Fry" firstAttribute="top" secondItem="Bx5-du-WbL" secondAttribute="bottom" constant="17" id="vav-Pi-OAV"/>
                             <constraint firstItem="Q2m-NB-Pdh" firstAttribute="leading" secondItem="efW-uM-BA4" secondAttribute="leading" id="yv6-1A-jMf"/>
                         </constraints>
                     </view>
@@ -245,6 +252,7 @@
                     <connections>
                         <outlet property="bCancelButton" destination="lxe-se-5s8" id="5fX-tU-wmG"/>
                         <outlet property="bControlView" destination="efW-uM-BA4" id="OB3-q9-Dzo"/>
+                        <outlet property="bProgressBar" destination="Bx5-du-WbL" id="yFy-UV-rrn"/>
                         <outlet property="bRecordButton" destination="k51-jT-Oua" id="fvC-NW-aSK"/>
                         <outlet property="bSendButton" destination="ZSX-h2-NSk" id="tmp-jS-6G4"/>
                         <outlet property="bTimerLabel" destination="XEm-XV-Fry" id="elh-9T-Y9b"/>
