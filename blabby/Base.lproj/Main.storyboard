@@ -180,7 +180,6 @@
                                         <state key="normal" backgroundImage="send"/>
                                         <connections>
                                             <action selector="bSendButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xxn-yY-ieE"/>
-                                            <action selector="bcontrolViewPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BP0-cl-JzF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxe-se-5s8" userLabel="bCancelButton">

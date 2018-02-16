@@ -31,10 +31,7 @@ class RecordViewController: UIViewController
     @IBOutlet weak var bSendButton: UIButton!
     @IBOutlet weak var bTimerLabel: UILabel!
     
-    @IBAction func bcontrolViewPressed(_ sender: Any) {
-        initialState=true
-        bControlViewToggle(state: initialState)
-    }
+   
    
     @IBAction func bSendButtonPressed(_ sender: Any) {
         
@@ -42,7 +39,8 @@ class RecordViewController: UIViewController
        
          try recordObj.soundRecorder.stop()
         print(" stopped successfully")
-        
+        initialState=true
+        bControlViewToggle(state: initialState)
         
     }
     
