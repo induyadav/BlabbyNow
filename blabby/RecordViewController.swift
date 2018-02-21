@@ -49,7 +49,7 @@ class RecordViewController: UIViewController
     }
     
     
-    weak var shapeLayer: CAShapeLayer?
+    
     //////fuction to make blabPressed Circular/////
     func blabPressedCircularStroke()
     {
@@ -107,7 +107,7 @@ class RecordViewController: UIViewController
     }
     override func viewDidLoad()
     {
-       
+       self.bProgressBar.accessibilityPath?.lineWidth=2
         self.blabPressedCircularStroke()
 //        recordObj.soundRecorder.prepareToRecord()
         
@@ -171,9 +171,16 @@ class RecordViewController: UIViewController
     
     func bUpdateProgressBar()
     {
-     var timeLeft = Float(self.recordObj.soundRecorder.currentTime)
-        self.bProgressBar.progress = timeLeft*0.12
+        bProgressBar.layer.cornerRadius = 8
+        bProgressBar.clipsToBounds = true
+        bProgressBar.layer.sublayers![1].cornerRadius = 8
+        bProgressBar.subviews[1].clipsToBounds = true
+        var timeLeft = Float(self.recordObj.soundRecorder.currentTime)
+        bProgressBar.progress = timeLeft*0.12
+      
     }
+    
+    
     }
     
 
