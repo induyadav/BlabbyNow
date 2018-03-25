@@ -12,7 +12,7 @@ import FirebaseDatabase
 
 //test commit ashutosh mane//
 
-class LoginViewController: UIViewController{
+class LoginViewController: UIViewController {
    //object of data model cladd my info
     override func viewDidLoad()
     {

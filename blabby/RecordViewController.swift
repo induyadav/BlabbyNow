@@ -30,6 +30,7 @@ class RecordViewController: UIViewController
     @IBOutlet weak var bCancelButton: UIButton!
     @IBOutlet weak var bSendButton: UIButton!
     @IBOutlet weak var bTimerLabel: UILabel!
+    @IBOutlet var bNoControlView: UIView!
     
    
     @IBAction func bCancelButtonPressed(_ sender: Any) {
@@ -109,14 +110,14 @@ class RecordViewController: UIViewController
     {
        self.bProgressBar.accessibilityPath?.lineWidth=2
         self.blabPressedCircularStroke()
-//        recordObj.soundRecorder.prepareToRecord()
+
         
         super.viewDidLoad()
         
         
         
-        recordObj.setupRecorder()
-        let longPress=UILongPressGestureRecognizer(target: self, action:#selector(bRecorderPressed(press:)))
+        
+            let longPress=UILongPressGestureRecognizer(target: self, action:#selector(bRecorderPressed(press:)))
             longPress.minimumPressDuration=0
             longPress.numberOfTouchesRequired=1
             longPress.allowableMovement=100
@@ -140,6 +141,7 @@ class RecordViewController: UIViewController
         {
             if press.state == .began
             {
+                recordObj.Recorder()
                 print(" in began");
                 bRecordButton.layer.borderColor = UIColor.blue.cgColor
                 bRecordButton.isHighlighted=true
@@ -150,14 +152,15 @@ class RecordViewController: UIViewController
                
             }
             else if press.state == .ended
-            {
+            {   recordObj.Recorder()
                 print(" in ended");
                 bRecordButton.layer.borderColor = UIColor(displayP3Red: 244.0/255.0, green: 178.0/255.0, blue: 70.0/255.0, alpha: 1.0).cgColor
                 bRecordButton.isHighlighted=false
                 recordObj.soundRecorder.pause()
                 blabRecordTime=recordObj.soundRecorder.currentTime
                 print("recording time is \(String(describing: blabRecordTime))")
-               
+                //recordObj.soundRecorder=nil
+                
             }
 
         }
@@ -165,7 +168,7 @@ class RecordViewController: UIViewController
     {
         bControlView.isHidden=state
         bControlView.setNeedsDisplay()
-        
+        bNoControlView.isHidden = !state
     }
 
     
@@ -177,9 +180,9 @@ class RecordViewController: UIViewController
         bProgressBar.subviews[1].clipsToBounds = true
         var timeLeft = Float(self.recordObj.soundRecorder.currentTime)
         bProgressBar.progress = timeLeft*0.12
-      
+
     }
-    
+
     
     }
     

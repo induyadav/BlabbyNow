@@ -8,86 +8,94 @@
 
 import Foundation
 import AVFoundation
+import UIKit
 
 class Record:AVAudioRecorder, AVAudioRecorderDelegate{
     
     var soundRecorder : AVAudioRecorder!
-    var fileName = "/audioFile.m4a"
+    var soundPlayer : AVAudioPlayer!
     var soundSession:AVAudioSession
-    override init() {
-        
+    var numberOfRecording = 0
+    
+    
+    override init()
+    {
         soundSession=AVAudioSession.sharedInstance()
-        do
-        {
-        try soundSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
-        try soundSession.setActive(true)
-        }catch
-        {
-            let e=NSError()
+            do
+            {   try soundSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
+            try soundSession.setActive(true)
+            }
+            catch
+            {   let e=NSError()
             print("error loading session \(e.localizedDescription)")
-            
-        }
+            }
         super.init()
     }
 
 
-
-
-    func getCacheDirectory() -> String {
-        print("inside getCacheDirectory()")
-        let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true) as! [String]
-        print("this is the from the path array"+paths[0])
-        return paths[0]
-        
-    }
-    
-    func getFileURL() -> URL{
-        print("inside getFileURL()")
-        let path  = getCacheDirectory()+fileName
-        
-        let filePath = URL(fileURLWithPath: path)
-        
-        return filePath
-    }
-    
-    
-    func setupRecorder()
+    func getDirectory() -> URL
     {
-        
-        
-
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentDirectory = paths[0]
+        return documentDirectory
+    }
+    
+    func Recorder()
+    {
+        if soundRecorder == nil
+        {
+            numberOfRecording += 1
+            let fileName = getDirectory().appendingPathComponent("\(numberOfRecording).m4a")
             let recordSettings = [AVFormatIDKey : kAudioFormatAppleLossless,
                                   AVEncoderAudioQualityKey : AVAudioQuality.max.rawValue,
                                   AVEncoderBitRateKey : 320000,
                                   AVNumberOfChannelsKey : 2,
                                   AVSampleRateKey : 44100.0 ] as [String: Any]
-        
-        
             do
-            {
-                soundRecorder = try AVAudioRecorder(url: getFileURL(), settings: recordSettings )
-                soundRecorder.delegate = self
-                print("file \(getFileURL())")
-                soundRecorder.prepareToRecord()
+            {       soundRecorder = try AVAudioRecorder(url: fileName, settings: recordSettings )
+                    soundRecorder.delegate = self
+                    print("file \(getDirectory())")
+                  
             }
-                
             catch
-            {
+            {   
                 let e=NSError()
-                
-                
-                    
-                    NSLog("Something Wrong")
-                    print(e.localizedDescription)
-                
-                
-                
-                
-        }
-        
+                NSLog("Something Wrong")
+                print(e.localizedDescription)
+            }
             
+        }
+        else{
+            UserDefaults.standard.set(numberOfRecording, forKey: "myNumber")
+          
+        }
+    }
+    
+   // call this func in view_did_load of Class RecordingViewController to fetch saved recording
+    func fetchBlabRecordingFromUserDefaults()
+    {
+        if let blabRecordingNumber:Int = UserDefaults.standard.object(forKey: "myNumber") as? Int {
+            numberOfRecording = blabRecordingNumber
+            print("aaaaaaaaaaaaaaaaaaaaaaaaaaa", numberOfRecording)
+           
+        }
     }
 
+    
+    func blabPlayer(path:URL)
+    {
+        do{
+            soundPlayer = try AVAudioPlayer(contentsOf: path)
+            soundPlayer.play()
+        }
+        catch{
+            
+            print("Some problem in blabPlayer in Class Record.swift")
+            
+        }
+    }
+    
+    
 
 
 }

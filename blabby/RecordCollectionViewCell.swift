@@ -12,25 +12,19 @@ import FirebaseDatabase
 
 class RecordCollectionViewCell: UICollectionViewCell
 {
-    
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(code:) has not implemented")
-//    }
-   
+
     
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var roundedImage: UIImageView!
     
     
-//    let swipeUp = UISwipeGestureRecognizer(target: self, action:#selector(thisIsFavourited(_:)))
+
     
 
     override func layoutSubviews() {
         super.layoutSubviews()
         self.makeItCircle()
-//        myLabel.addGestureRecognizer(swipeUp)
-//        swipeUp.direction = UISwipeGestureRecognizerDirection.up
-        
+
     }
     
     func makeItCircle() {

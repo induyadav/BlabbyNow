@@ -15,20 +15,23 @@ import UIKit
 class RecordCollectionViewController: UICollectionViewController
 {
     let reuseIdentifier = "Collection Cell"
-    var names = ["asdfg","asdfg","asdfg","asdfg"]
+    var names = ["sarif","rohit","sachin","ashish"]
     var images:[UIImage]=[#imageLiteral(resourceName: "profile 1"),#imageLiteral(resourceName: "profile 2"),#imageLiteral(resourceName: "profile 3"),#imageLiteral(resourceName: "profile 4"),#imageLiteral(resourceName: "profile 5")]
-    var onEar:UIImage=#imageLiteral(resourceName: "onear.JPG")
+    var onEar:UIImage=#imageLiteral(resourceName: "onEar")
     var users = [User]()
     var flag:Bool=false
     var temp:Int?
     
-    var objRecordVC = RecordViewController()
+    @IBOutlet var blabCollectionView: UICollectionView!
     
+    var objRecordVC = RecordViewController()
+    var objRecord = Record()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(" collection view connected")
-    
+        objRecord.fetchBlabRecordingFromUserDefaults()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,8 +49,8 @@ class RecordCollectionViewController: UICollectionViewController
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         
-        print("names.count=\(names.count)")
-        return names.count
+        print("names.count=\(self.objRecord.numberOfRecording)")
+        return self.objRecord.numberOfRecording
         
     }
     
@@ -62,8 +65,9 @@ class RecordCollectionViewController: UICollectionViewController
 //            let user = users[indexPath.row]
         print ("collection view func access")
         
-        textCell.myLabel?.text = names[indexPath.row]
+      //  textCell.myLabel?.text = names[indexPath.row]
 //      textCell.myLabel?.text = user.name
+           textCell.myLabel?.text = String(indexPath.row+1)
         textCell.roundedImage.image = images[indexPath.row]
             
         }
@@ -73,15 +77,17 @@ class RecordCollectionViewController: UICollectionViewController
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
+        let pathh = objRecord.getDirectory().appendingPathComponent("\(indexPath.row + 1).m4a")
+       
+        objRecord.blabPlayer(path: pathh)
         
-                //func call for didSelect = play on select
+      //  func callfordidSelect = play on select
             if initialState==true
         {
                 print(" play on select")
                 print(indexPath.row)
-            
                 print(flag)
-            let cell = collectionView.cellForItem(at: indexPath)
+                let cell = collectionView.cellForItem(at: indexPath)
             if let tcell=cell as! RecordCollectionViewCell!
             {
                 if flag==false
@@ -90,15 +96,15 @@ class RecordCollectionViewController: UICollectionViewController
                     print("set top onEar 2")
                     flag=true
                     temp=indexPath.row
-                    
-                    
+
+
                 }
                 else if temp==indexPath.row
                     {
                         print("blab paused")
                         tcell.roundedImage.image=images[indexPath.row]
                         flag=false
-                        
+
                     }
                     else
                     {
@@ -114,33 +120,33 @@ class RecordCollectionViewController: UICollectionViewController
                         print(" select for send")
                     let cell = collectionView.cellForItem(at: indexPath)
                     if let tcell=cell as! RecordCollectionViewCell!
-                    
+
                         {
                           tcell.roundedImage.image=#imageLiteral(resourceName: "selectToSend")
                         }
                 }
-                    
-                
+        
+        
     }
     override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath)
     {
         if initialState==true
         {
             let cell=collectionView.cellForItem(at: indexPath )
-            
+
             print("this is  deselected\(indexPath.row)")
             if let tcell=cell as! RecordCollectionViewCell!
             {
 
                 tcell.roundedImage.image=images[indexPath.row]
-          
+
             }
         }
         else{
            return
         }
-        
-        
+
+
     }
     
     
