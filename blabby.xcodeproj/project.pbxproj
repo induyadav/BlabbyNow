@@ -14,15 +14,19 @@
 		C56DC72920036931003FE773 /* RecordCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56DC72820036931003FE773 /* RecordCollectionViewController.swift */; };
 		C56DC72B200572C5003FE773 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C56DC72A200572C5003FE773 /* Launch Screen.storyboard */; };
 		FB0F984F1F9A13BB0097A7CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F984E1F9A13BB0097A7CB /* LoginViewController.swift */; };
+		FB377305205A98750086670A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB377303205A98750086670A /* Main.storyboard */; };
+		FB4FF29D205AC9DB0022DC7C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4FF29C205AC9DB0022DC7C /* ProfileViewController.swift */; };
+		FB4FF29F205AC9F30022DC7C /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4FF29E205AC9F30022DC7C /* NotificationViewController.swift */; };
+		FB4FF2A3205ADA5A0022DC7C /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4FF2A2205ADA5A0022DC7C /* NotificationTableViewCell.swift */; };
 		FB56B2C71F7A494C0065739C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB56B2C51F7A487E0065739C /* CoreData.framework */; };
 		FB6372C01F1E9E030069F3A1 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6372BF1F1E9E030069F3A1 /* Record.swift */; };
 		FB6D79001FA4A00C00CF7DAE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6D78FF1FA4A00C00CF7DAE /* User.swift */; };
 		FB73B1501F9DB11600C1B8EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB73B14F1F9DB11600C1B8EA /* GoogleService-Info.plist */; };
+		FB8D6854205F9AD3007004DA /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D6853205F9AD3007004DA /* NotificationTableViewController.swift */; };
 		FBFFF93C1F790D6B0074AA06 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFCAE3071F037E13001B7F25 /* CFNetwork.framework */; };
 		FBFFF93D1F790D710074AA06 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFCAE3051F037E01001B7F25 /* SystemConfiguration.framework */; };
 		FFAF1A501EE9BC8E00AB1512 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF1A4F1EE9BC8E00AB1512 /* AppDelegate.swift */; };
 		FFAF1A521EE9BC8E00AB1512 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF1A511EE9BC8E00AB1512 /* RecordViewController.swift */; };
-		FFAF1A551EE9BC8E00AB1512 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFAF1A531EE9BC8E00AB1512 /* Main.storyboard */; };
 		FFAF1A5A1EE9BC8E00AB1512 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFAF1A591EE9BC8E00AB1512 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -59,14 +63,18 @@
 		C56DC72C20057341003FE773 /* yoyoblabAsset-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yoyoblabAsset-1.png"; sourceTree = "<group>"; };
 		C7A5B246E630B4668F50F952 /* Pods_blabby.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_blabby.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0F984E1F9A13BB0097A7CB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FB377304205A98750086670A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB4FF29C205AC9DB0022DC7C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FB4FF29E205AC9F30022DC7C /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		FB4FF2A2205ADA5A0022DC7C /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		FB56B2C51F7A487E0065739C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FB6372BF1F1E9E030069F3A1 /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		FB6D78FF1FA4A00C00CF7DAE /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FB73B14F1F9DB11600C1B8EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FB8D6853205F9AD3007004DA /* NotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
 		FFAF1A4C1EE9BC8E00AB1512 /* blabby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blabby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFAF1A4F1EE9BC8E00AB1512 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFAF1A511EE9BC8E00AB1512 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
-		FFAF1A541EE9BC8E00AB1512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFAF1A591EE9BC8E00AB1512 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFAF1A5E1EE9BC8E00AB1512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFAF1A631EE9BC8E00AB1512 /* blabbyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blabbyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,10 +153,47 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FB377306205AC8FF0086670A /* Main screen */ = {
+			isa = PBXGroup;
+			children = (
+				FFAF1A511EE9BC8E00AB1512 /* RecordViewController.swift */,
+				C56DC72820036931003FE773 /* RecordCollectionViewController.swift */,
+				04AC01BA1EED7AE10019CE1B /* RecordCollectionViewCell.swift */,
+			);
+			name = "Main screen";
+			sourceTree = "<group>";
+		};
+		FB377307205AC9170086670A /* Login screen */ = {
+			isa = PBXGroup;
+			children = (
+				FB0F984E1F9A13BB0097A7CB /* LoginViewController.swift */,
+			);
+			name = "Login screen";
+			sourceTree = "<group>";
+		};
+		FB377308205AC92E0086670A /* Notification screen */ = {
+			isa = PBXGroup;
+			children = (
+				FB4FF29E205AC9F30022DC7C /* NotificationViewController.swift */,
+				FB8D6853205F9AD3007004DA /* NotificationTableViewController.swift */,
+				FB4FF2A2205ADA5A0022DC7C /* NotificationTableViewCell.swift */,
+			);
+			name = "Notification screen";
+			sourceTree = "<group>";
+		};
+		FB4FF29B205AC9520022DC7C /* Profile screen */ = {
+			isa = PBXGroup;
+			children = (
+				FB4FF29C205AC9DB0022DC7C /* ProfileViewController.swift */,
+			);
+			name = "Profile screen";
+			sourceTree = "<group>";
+		};
 		FB6D78FE1FA49FB600CF7DAE /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				FB6D78FF1FA4A00C00CF7DAE /* User.swift */,
+				FB6372BF1F1E9E030069F3A1 /* Record.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -177,13 +222,12 @@
 			isa = PBXGroup;
 			children = (
 				FB6D78FE1FA49FB600CF7DAE /* Model */,
-				FB0F984E1F9A13BB0097A7CB /* LoginViewController.swift */,
-				FFAF1A511EE9BC8E00AB1512 /* RecordViewController.swift */,
-				C56DC72820036931003FE773 /* RecordCollectionViewController.swift */,
-				04AC01BA1EED7AE10019CE1B /* RecordCollectionViewCell.swift */,
-				FFAF1A531EE9BC8E00AB1512 /* Main.storyboard */,
+				FB377307205AC9170086670A /* Login screen */,
+				FB377306205AC8FF0086670A /* Main screen */,
+				FB377308205AC92E0086670A /* Notification screen */,
+				FB4FF29B205AC9520022DC7C /* Profile screen */,
+				FB377303205A98750086670A /* Main.storyboard */,
 				FFAF1A4F1EE9BC8E00AB1512 /* AppDelegate.swift */,
-				FB6372BF1F1E9E030069F3A1 /* Record.swift */,
 				04AC01B71EEC16860019CE1B /* supporting files */,
 			);
 			path = blabby;
@@ -322,7 +366,7 @@
 				C56DC72B200572C5003FE773 /* Launch Screen.storyboard in Resources */,
 				FB73B1501F9DB11600C1B8EA /* GoogleService-Info.plist in Resources */,
 				FFAF1A5A1EE9BC8E00AB1512 /* Assets.xcassets in Resources */,
-				FFAF1A551EE9BC8E00AB1512 /* Main.storyboard in Resources */,
+				FB377305205A98750086670A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,7 +554,11 @@
 				04AC01BB1EED7AE10019CE1B /* RecordCollectionViewCell.swift in Sources */,
 				FFAF1A521EE9BC8E00AB1512 /* RecordViewController.swift in Sources */,
 				FB6372C01F1E9E030069F3A1 /* Record.swift in Sources */,
+				FB4FF2A3205ADA5A0022DC7C /* NotificationTableViewCell.swift in Sources */,
+				FB8D6854205F9AD3007004DA /* NotificationTableViewController.swift in Sources */,
+				FB4FF29F205AC9F30022DC7C /* NotificationViewController.swift in Sources */,
 				FB6D79001FA4A00C00CF7DAE /* User.swift in Sources */,
+				FB4FF29D205AC9DB0022DC7C /* ProfileViewController.swift in Sources */,
 				FFAF1A501EE9BC8E00AB1512 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,10 +593,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FFAF1A531EE9BC8E00AB1512 /* Main.storyboard */ = {
+		FB377303205A98750086670A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FFAF1A541EE9BC8E00AB1512 /* Base */,
+				FB377304205A98750086670A /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -666,6 +714,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.blabby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -686,6 +735,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.blabby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
