@@ -49,7 +49,7 @@ class RecordCollectionViewController: UICollectionViewController
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         
-        print("names.count=\(self.objRecord.numberOfRecording)")
+        print(" in numberOfItemsInSection names.count=\(self.objRecord.numberOfRecording)")
         return self.objRecord.numberOfRecording
         
     }
@@ -65,10 +65,10 @@ class RecordCollectionViewController: UICollectionViewController
 //            let user = users[indexPath.row]
         print ("collection view func access")
         
-      //  textCell.myLabel?.text = names[indexPath.row]
-//      textCell.myLabel?.text = user.name
-           textCell.myLabel?.text = String(indexPath.row+1)
-        textCell.roundedImage.image = images[indexPath.row]
+   //    textCell.myLabel?.text = names[indexPath.row]
+
+     textCell.myLabel?.text = String(indexPath.row+1)
+          textCell.roundedImage.image = images[indexPath.row+1]
             
         }
         return cell

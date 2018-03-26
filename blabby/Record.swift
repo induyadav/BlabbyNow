@@ -23,11 +23,12 @@ class Record:AVAudioRecorder, AVAudioRecorderDelegate{
         soundSession=AVAudioSession.sharedInstance()
             do
             {   try soundSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
-            try soundSession.setActive(true)
+                try soundSession.setActive(true)
+                print("Audio Session created")
             }
             catch
             {   let e=NSError()
-            print("error loading session \(e.localizedDescription)")
+                print("error loading session \(e.localizedDescription)")
             }
         super.init()
     }
@@ -37,23 +38,31 @@ class Record:AVAudioRecorder, AVAudioRecorderDelegate{
     {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentDirectory = paths[0]
+        print("get directory created")
         return documentDirectory
+        
     }
     
     func Recorder()
-    {
+    {   print("number of records \(numberOfRecording)")
         if soundRecorder == nil
-        {
+        {   print("sondRecorder == nil")
+            
             numberOfRecording += 1
+            print("number of records \(numberOfRecording)")
+            
             let fileName = getDirectory().appendingPathComponent("\(numberOfRecording).m4a")
+            print("file name just created = \(fileName)")
             let recordSettings = [AVFormatIDKey : kAudioFormatAppleLossless,
                                   AVEncoderAudioQualityKey : AVAudioQuality.max.rawValue,
                                   AVEncoderBitRateKey : 320000,
                                   AVNumberOfChannelsKey : 2,
                                   AVSampleRateKey : 44100.0 ] as [String: Any]
+            print("Recording settings ready now")
             do
             {       soundRecorder = try AVAudioRecorder(url: fileName, settings: recordSettings )
                     soundRecorder.delegate = self
+                    print("file \(fileName)")
                     print("file \(getDirectory())")
                   
             }
@@ -66,8 +75,9 @@ class Record:AVAudioRecorder, AVAudioRecorderDelegate{
             
         }
         else{
+            print("in else of the record.swift")
             UserDefaults.standard.set(numberOfRecording, forKey: "myNumber")
-          
+            
         }
     }
     
@@ -76,7 +86,7 @@ class Record:AVAudioRecorder, AVAudioRecorderDelegate{
     {
         if let blabRecordingNumber:Int = UserDefaults.standard.object(forKey: "myNumber") as? Int {
             numberOfRecording = blabRecordingNumber
-            print("aaaaaaaaaaaaaaaaaaaaaaaaaaa", numberOfRecording)
+            print(" RCVC fetching from user defaults, recording number", numberOfRecording)
            
         }
     }
@@ -87,6 +97,7 @@ class Record:AVAudioRecorder, AVAudioRecorderDelegate{
         do{
             soundPlayer = try AVAudioPlayer(contentsOf: path)
             soundPlayer.play()
+           
         }
         catch{
             
