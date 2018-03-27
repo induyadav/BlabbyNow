@@ -17,7 +17,7 @@ class RecordViewController: UIViewController
 {
    
     
-    lazy var recordObj = Record()
+    var recordObj = Record()
     var users = [User]()
     
 
@@ -123,7 +123,7 @@ class RecordViewController: UIViewController
             longPress.allowableMovement=100
         
         
-        bRecordButton.addGestureRecognizer(longPress)
+            bRecordButton.addGestureRecognizer(longPress)
         
         
      
@@ -152,7 +152,7 @@ class RecordViewController: UIViewController
                
             }
             else if press.state == .ended
-            {   recordObj.Recorder()
+            {   //recordObj.Recorder()
                 print(" in ended");
                 bRecordButton.layer.borderColor = UIColor(displayP3Red: 244.0/255.0, green: 178.0/255.0, blue: 70.0/255.0, alpha: 1.0).cgColor
                 bRecordButton.isHighlighted=false

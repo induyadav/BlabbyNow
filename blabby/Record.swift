@@ -8,12 +8,11 @@
 
 import Foundation
 import AVFoundation
-import UIKit
 
 class Record:AVAudioRecorder, AVAudioRecorderDelegate{
-    
+   
+//    var objPlayer = Player()
     var soundRecorder : AVAudioRecorder!
-    var soundPlayer : AVAudioPlayer!
     var soundSession:AVAudioSession
     var numberOfRecording = 0
     
@@ -34,24 +33,18 @@ class Record:AVAudioRecorder, AVAudioRecorderDelegate{
     }
 
 
-    func getDirectory() -> URL
-    {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let documentDirectory = paths[0]
-        print("get directory created")
-        return documentDirectory
-        
-    }
+   
     
     func Recorder()
-    {   print("number of records \(numberOfRecording)")
-        if soundRecorder == nil
-        {   print("sondRecorder == nil")
+    {
+        print("in recorder")
+        print("number of records \(numberOfRecording)")
+        
+
+        numberOfRecording += 1
+        print("number of records \(numberOfRecording)")
             
-            numberOfRecording += 1
-            print("number of records \(numberOfRecording)")
-            
-            let fileName = getDirectory().appendingPathComponent("\(numberOfRecording).m4a")
+            let fileName = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("\(numberOfRecording).m4a")
             print("file name just created = \(fileName)")
             let recordSettings = [AVFormatIDKey : kAudioFormatAppleLossless,
                                   AVEncoderAudioQualityKey : AVAudioQuality.max.rawValue,
@@ -63,48 +56,31 @@ class Record:AVAudioRecorder, AVAudioRecorderDelegate{
             {       soundRecorder = try AVAudioRecorder(url: fileName, settings: recordSettings )
                     soundRecorder.delegate = self
                     print("file \(fileName)")
-                    print("file \(getDirectory())")
-                  
+                   
+                
             }
             catch
             {   
                 let e=NSError()
-                NSLog("Something Wrong")
+                NSLog("Something with recorder")
                 print(e.localizedDescription)
             }
             
-        }
-        else{
-            print("in else of the record.swift")
-            UserDefaults.standard.set(numberOfRecording, forKey: "myNumber")
-            
-        }
+        
     }
     
-   // call this func in view_did_load of Class RecordingViewController to fetch saved recording
-    func fetchBlabRecordingFromUserDefaults()
-    {
-        if let blabRecordingNumber:Int = UserDefaults.standard.object(forKey: "myNumber") as? Int {
-            numberOfRecording = blabRecordingNumber
-            print(" RCVC fetching from user defaults, recording number", numberOfRecording)
-           
-        }
-    }
+//   // call this func in view_did_load of Class RecordingViewController to fetch saved recording
+//    func fetchBlabRecordingFromUserDefaults()
+//    {
+//        if let blabRecordingNumber:Int = UserDefaults.standard.object(forKey: "myNumber") as? Int {
+//            numberOfRecording = blabRecordingNumber
+//            print(" RCVC fetching from user defaults, recording number", numberOfRecording)
+//
+//        }
+//    }
 
     
-    func blabPlayer(path:URL)
-    {
-        do{
-            soundPlayer = try AVAudioPlayer(contentsOf: path)
-            soundPlayer.play()
-           
-        }
-        catch{
-            
-            print("Some problem in blabPlayer in Class Record.swift")
-            
-        }
-    }
+    
     
     
 

@@ -23,6 +23,7 @@
 		FB6D79001FA4A00C00CF7DAE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6D78FF1FA4A00C00CF7DAE /* User.swift */; };
 		FB73B1501F9DB11600C1B8EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB73B14F1F9DB11600C1B8EA /* GoogleService-Info.plist */; };
 		FB8D6854205F9AD3007004DA /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D6853205F9AD3007004DA /* NotificationTableViewController.swift */; };
+		FB8E8A0420699B66000D36F5 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E8A0320699B66000D36F5 /* Player.swift */; };
 		FBFFF93C1F790D6B0074AA06 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFCAE3071F037E13001B7F25 /* CFNetwork.framework */; };
 		FBFFF93D1F790D710074AA06 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFCAE3051F037E01001B7F25 /* SystemConfiguration.framework */; };
 		FFAF1A501EE9BC8E00AB1512 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF1A4F1EE9BC8E00AB1512 /* AppDelegate.swift */; };
@@ -72,6 +73,7 @@
 		FB6D78FF1FA4A00C00CF7DAE /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FB73B14F1F9DB11600C1B8EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB8D6853205F9AD3007004DA /* NotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
+		FB8E8A0320699B66000D36F5 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		FFAF1A4C1EE9BC8E00AB1512 /* blabby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blabby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFAF1A4F1EE9BC8E00AB1512 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFAF1A511EE9BC8E00AB1512 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			children = (
 				FB6D78FF1FA4A00C00CF7DAE /* User.swift */,
 				FB6372BF1F1E9E030069F3A1 /* Record.swift */,
+				FB8E8A0320699B66000D36F5 /* Player.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				FB0F984F1F9A13BB0097A7CB /* LoginViewController.swift in Sources */,
 				04AC01BB1EED7AE10019CE1B /* RecordCollectionViewCell.swift in Sources */,
 				FFAF1A521EE9BC8E00AB1512 /* RecordViewController.swift in Sources */,
+				FB8E8A0420699B66000D36F5 /* Player.swift in Sources */,
 				FB6372C01F1E9E030069F3A1 /* Record.swift in Sources */,
 				FB4FF2A3205ADA5A0022DC7C /* NotificationTableViewCell.swift in Sources */,
 				FB8D6854205F9AD3007004DA /* NotificationTableViewController.swift in Sources */,

@@ -9,14 +9,11 @@
 import UIKit
 
 
-
-
-
 class RecordCollectionViewController: UICollectionViewController
 {
     let reuseIdentifier = "Collection Cell"
-    var names = ["sarif","rohit","sachin","ashish"]
-    var images:[UIImage]=[#imageLiteral(resourceName: "profile 1"),#imageLiteral(resourceName: "profile 2"),#imageLiteral(resourceName: "profile 3"),#imageLiteral(resourceName: "profile 4"),#imageLiteral(resourceName: "profile 5")]
+    var names = ["sarif","rohit","sachin","ashish","sarif","rohit","sachin","ashish","sarif","rohit","sachin","ashish","sarif","rohit","sachin","ashish"]
+    var images:[UIImage]=[#imageLiteral(resourceName: "profile 1"),#imageLiteral(resourceName: "profile 2"),#imageLiteral(resourceName: "profile 3"),#imageLiteral(resourceName: "profile 4"),#imageLiteral(resourceName: "profile 5"),#imageLiteral(resourceName: "profile 1"),#imageLiteral(resourceName: "profile 2"),#imageLiteral(resourceName: "profile 3"),#imageLiteral(resourceName: "profile 4"),#imageLiteral(resourceName: "profile 5"),#imageLiteral(resourceName: "profile 1"),#imageLiteral(resourceName: "profile 2"),#imageLiteral(resourceName: "profile 3"),#imageLiteral(resourceName: "profile 4"),#imageLiteral(resourceName: "profile 5"),#imageLiteral(resourceName: "profile 1"),#imageLiteral(resourceName: "profile 2"),#imageLiteral(resourceName: "profile 3"),#imageLiteral(resourceName: "profile 4"),#imageLiteral(resourceName: "profile 5")]
     var onEar:UIImage=#imageLiteral(resourceName: "onEar")
     var users = [User]()
     var flag:Bool=false
@@ -24,13 +21,19 @@ class RecordCollectionViewController: UICollectionViewController
     
     @IBOutlet var blabCollectionView: UICollectionView!
     
-    var objRecordVC = RecordViewController()
-    var objRecord = Record()
+//    var objRecordVC = RecordViewController()
+//    var objRecord = Record()
+    var objPlayer = Player()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(" collection view connected")
-        objRecord.fetchBlabRecordingFromUserDefaults()
+      //  objRecord.fetchBlabRecordingFromUserDefaults()
+        
+        objPlayer.listOfRecordings()
+        print("this is the blabRecording Array elements \(objPlayer.blabRecordings.count)")
+        blabCollectionView.reloadData()
         
     }
 
@@ -49,9 +52,9 @@ class RecordCollectionViewController: UICollectionViewController
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         
-        print(" in numberOfItemsInSection names.count=\(self.objRecord.numberOfRecording)")
-        return self.objRecord.numberOfRecording
-        
+//        print(" in numberOfItemsInSection names.count=\(self.objRecord.numberOfRecording)")
+//        return self.objRecord.numberOfRecording
+        return objPlayer.blabRecordings.count
     }
     
     
@@ -65,10 +68,10 @@ class RecordCollectionViewController: UICollectionViewController
 //            let user = users[indexPath.row]
         print ("collection view func access")
         
-   //    textCell.myLabel?.text = names[indexPath.row]
+    textCell.myLabel?.text = names[indexPath.row]
 
-     textCell.myLabel?.text = String(indexPath.row+1)
-          textCell.roundedImage.image = images[indexPath.row+1]
+//     textCell.myLabel?.text = String(indexPath.row)
+          textCell.roundedImage.image = images[indexPath.row]
             
         }
         return cell
@@ -77,9 +80,9 @@ class RecordCollectionViewController: UICollectionViewController
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-        let pathh = objRecord.getDirectory().appendingPathComponent("\(indexPath.row + 1).m4a")
+       // let pathh = objRecord.getDirectory().appendingPathComponent("\(indexPath.row+1).m4a")
        
-        objRecord.blabPlayer(path: pathh)
+        objPlayer.blabPlayer(path: (objPlayer.blabRecordings[(indexPath.row)]))
         
       //  func callfordidSelect = play on select
             if initialState==true
